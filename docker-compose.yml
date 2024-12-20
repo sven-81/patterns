@@ -1,0 +1,24 @@
+services:
+  pattern-php:
+    container_name: dev-php8-3
+    build:
+      dockerfile: docker/Dockerfile-debug
+    environment:
+      - 'VHOST=localhost'
+    volumes:
+      - ./:/app
+    networks:
+      - patterns-network
+
+  composer:
+    container_name: pattern-composer
+    image: composer:latest
+    command: [ "composer", "${CMD:-dump-autoload}", "--ignore-platform-reqs" ]
+    volumes:
+      - ./:/app
+    networks:
+      - patterns-network
+
+networks:
+  patterns-network:
+    driver: bridge

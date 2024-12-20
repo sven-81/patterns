@@ -1,0 +1,28 @@
+{
+  "name": "sven/patterns",
+  "description": "php pattern examples",
+  "repositories": {
+    "flyeralarm/php-code-validator": {
+      "type": "git",
+      "url": "https://github.com/flyeralarm/php-code-validator"
+    }
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "phpunit/phpunit": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "patterns\\": [
+        "src/"
+      ]
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "patterns\\": [
+        "tests/"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.idea/*
+!.idea/.gitignore
+!.idea/codeStyles
+
+/tests/reports/coverage
+
+projectname.config.php
+/config/dev.config.php
+/tests/.phpunit.result.cache
+/token

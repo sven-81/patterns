@@ -1,0 +1,4 @@
+*.txt text eol=crlf
+*.html text eol=crlf
+*.sh text eol=lf
+*.xml text eol=lf

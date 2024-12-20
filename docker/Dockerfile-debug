@@ -1,0 +1,10 @@
+FROM af.flyeralarm/base-docker-dev/php/8.3/fpm-xdebug:latest
+
+RUN apk update
+RUN apk add make
+
+ADD . /app
+WORKDIR /app
+
+RUN composer install -d /app
+RUN composer dump-autoload -o -d /app
