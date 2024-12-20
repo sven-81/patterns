@@ -8,3 +8,4 @@ projectname.config.php
 /config/dev.config.php
 /tests/.phpunit.result.cache
 /token
+/vendor/
