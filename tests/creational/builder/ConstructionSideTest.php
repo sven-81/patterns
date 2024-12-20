@@ -21,7 +21,10 @@ class ConstructionSideTest extends TestCase
             . PHP_EOL . PHP_EOL .
             'Build a Palace with a golden door' . PHP_EOL .
             'I\'m a Palace with: 32 walls, 48 windows, golden doors, türme roof, 28 rooms, 5 garages and 2 pools.' .
-            PHP_EOL
+            PHP_EOL . PHP_EOL .
+            'Build a custom Palace with a silver door' . PHP_EOL .
+            'I\'m a Palace with: 32 walls, 48 windows, silver doors, walmdach roof, 28 rooms, 5 garages and 3 pools.'
+            . PHP_EOL
         );
 
         $director = new Director();

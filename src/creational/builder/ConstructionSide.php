@@ -23,9 +23,14 @@ class ConstructionSide
         $redDoorTinyHouse = $this->director->buildRedDoorTinyHouse($tinyHouseBuilder);
         $redDoorTinyHouse->about();
 
-        print PHP_EOL . 'Build a Palace with a golden door'. PHP_EOL;
+        print PHP_EOL . 'Build a Palace with a golden door' . PHP_EOL;
         $palaceBuilder = new PalaceBuilder();
         $palace = $this->director->buildPalaceWithGoldenDoor($palaceBuilder);
         $palace->about();
+
+        print PHP_EOL . 'Build a custom Palace with a silver door' . PHP_EOL;
+        $palaceBuilder = new PalaceBuilder();
+        $customPalace = $palaceBuilder->addDoors('silver')->build();
+        $customPalace->about();
     }
 }
