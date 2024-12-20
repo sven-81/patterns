@@ -17,7 +17,7 @@ interface HouseBuilder
     public function addRoof(int $type): static;
 
 
-    public function addGarage(): static;
+    public function addGarage(int $garage): static;
 
 
     public function addRooms(int $rooms): static;

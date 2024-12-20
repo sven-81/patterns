@@ -4,15 +4,16 @@ declare(strict_types=1);
 
 namespace patterns\creational\builder;
 
-class TinyHouseBuilder implements HouseBuilder
+class PalaceBuilder implements HouseBuilder
 {
     public function __construct(
-        private int $walls = 5,
-        private int $windows = 4,
-        private string $doors = 'black',
-        private string $roof = 'flachdach',
-        private int $rooms = 2,
-        private int $garage = 0
+        private int $walls = 32,
+        private int $windows = 48,
+        private string $doors = 'steel',
+        private string $roof = 'walmdach',
+        private int $rooms = 28,
+        private int $garage = 5,
+        private int $pool = 3
     ) {
     }
 
@@ -46,15 +47,18 @@ class TinyHouseBuilder implements HouseBuilder
         $this->roof = match ($type) {
             1 => 'flachdach',
             2 => 'pultdach',
+            3 => 'satteldach',
+            4 => 'walmdach',
+            5 => 'türme',
         };
 
         return $this;
     }
 
 
-    public function addGarage(int $garage = 0): static
+    public function addGarage(int $garage): static
     {
-        $this->garage = 0;
+        $this->garage = $garage;
 
         return $this;
     }
@@ -68,15 +72,24 @@ class TinyHouseBuilder implements HouseBuilder
     }
 
 
-    public function build(): TinyHouse
+    public function addPool(int $pool): static
     {
-        return new TinyHouse(
+        $this->pool = $pool;
+
+        return $this;
+    }
+
+
+    public function build(): Palace
+    {
+        return new Palace(
             $this->windows,
             $this->doors,
             $this->roof,
             $this->rooms,
             $this->walls,
-            $this->garage
+            $this->garage,
+            $this->pool
         );
     }
 }

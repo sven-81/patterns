@@ -6,4 +6,5 @@ namespace patterns\creational\builder;
 
 interface House
 {
+    public function about(): void;
 }
