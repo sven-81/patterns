@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace patterns\creational\factoryMethod;
 
-interface FileExport
+interface Elf
 {
+    public function wrap(Present $present): void;
 }

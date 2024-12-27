@@ -13,6 +13,7 @@
       - Trennung der Objektinstanziierung von der Objektverwendung (Kapselung)
       - Flexibilität bei der Auswahl des zu erstellenden Objekts zur Laufzeit (Dependency Inversion)
       - erleichtert Erweiterbarkeit (hinzufügen neuer Objekttypen)
+      - Single Responsibility Principle
 2. Abstract Factory
 3. Builder:
     - Ziel:

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace patterns\creational\builder;
+namespace patterns\creational\builder\simple;
 
 class PizzaBuilder
 {
