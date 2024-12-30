@@ -8,6 +8,7 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(TinyHouseBuilder::class)]
+#[CoversClass(TinyHouse::class)]
 class TinyHouseBuilderTest extends TestCase
 {
     public function testCanBuildWithBlackDoorsAndFlachdach(): void

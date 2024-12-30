@@ -8,6 +8,11 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(NorthPoleElfCenter::class)]
+#[CoversClass(AnotherHandymanElf::class)]
+#[CoversClass(Bear::class)]
+#[CoversClass(HandymanElf::class)]
+#[CoversClass(Laptop::class)]
+#[CoversClass(TailorElf::class)]
 class NorthPoleElfCenterTest extends TestCase
 {
     public function testCanRun(): void

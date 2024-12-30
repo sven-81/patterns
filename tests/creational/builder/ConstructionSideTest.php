@@ -8,6 +8,11 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(ConstructionSide::class)]
+#[CoversClass(Director::class)]
+#[CoversClass(Palace::class)]
+#[CoversClass(PalaceBuilder::class)]
+#[CoversClass(TinyHouse::class)]
+#[CoversClass(TinyHouseBuilder::class)]
 class ConstructionSideTest extends TestCase
 {
     public function testCanRun(): void

@@ -4,14 +4,30 @@ declare(strict_types=1);
 
 namespace patterns\creational\abstractFactory;
 
+use patterns\creational\abstractFactory\newspaper\NewspaperPageTemplate;
 use patterns\creational\abstractFactory\newspaper\NewspaperPicture;
+use patterns\creational\abstractFactory\newspaper\NewspaperRenderer;
 use patterns\creational\abstractFactory\newspaper\NewspaperTemplateFactory;
+use patterns\creational\abstractFactory\newspaper\NewspaperTitleTemplate;
+use patterns\creational\abstractFactory\online\OnlinePageTemplate;
 use patterns\creational\abstractFactory\online\OnlinePicture;
+use patterns\creational\abstractFactory\online\OnlineRenderer;
 use patterns\creational\abstractFactory\online\OnlineTemplateFactory;
+use patterns\creational\abstractFactory\online\OnlineTitleTemplate;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(Page::class)]
+#[CoversClass(NewspaperPageTemplate::class)]
+#[CoversClass(NewspaperPicture::class)]
+#[CoversClass(NewspaperRenderer::class)]
+#[CoversClass(NewspaperTemplateFactory::class)]
+#[CoversClass(NewspaperTitleTemplate::class)]
+#[CoversClass(OnlinePageTemplate::class)]
+#[CoversClass(OnlinePicture::class)]
+#[CoversClass(OnlineRenderer::class)]
+#[CoversClass(OnlineTemplateFactory::class)]
+#[CoversClass(OnlineTitleTemplate::class)]
 class PageTest extends TestCase
 {
     public function testCanRenderOnlinePage(): void

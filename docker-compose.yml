@@ -5,6 +5,9 @@ services:
       dockerfile: docker/Dockerfile-debug
     environment:
       - 'VHOST=localhost'
+      - 'XDEBUG_MODE=coverage,debug'
+      - 'XDEBUG_CLIENT_HOST=host.docker.internal'
+      - 'XDEBUG_LOG=/var/log'
     volumes:
       - ./:/app
     networks:

@@ -11,7 +11,7 @@ class ComplexProductOrder extends OrderPrototype
     protected string $category = 'really complex';
 
     private DateTimeImmutable $date;
-    
+
 
     public function __construct(private readonly DateTimeImmutable $clock)
     {

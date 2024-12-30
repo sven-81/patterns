@@ -8,6 +8,7 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(PizzaBuilder::class)]
+#[CoversClass(Pizza::class)]
 class PizzaBuilderTest extends TestCase
 {
     public function testCanBuildSalamiPizza(): void

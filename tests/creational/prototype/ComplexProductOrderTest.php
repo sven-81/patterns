@@ -9,6 +9,8 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(OrderPrototype::class)]
+#[CoversClass(ComplexProductOrder::class)]
+#[CoversClass(SimpleProductOrder::class)]
 class ComplexProductOrderTest extends TestCase
 {
     public function testCanCloneOrders(): void

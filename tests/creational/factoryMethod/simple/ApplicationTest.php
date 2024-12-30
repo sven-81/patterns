@@ -8,6 +8,10 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(Application::class)]
+#[CoversClass(FileLogger::class)]
+#[CoversClass(FileLoggerFactory::class)]
+#[CoversClass(StdoutLogger::class)]
+#[CoversClass(StdoutLoggerFactory::class)]
 class ApplicationTest extends TestCase
 {
     private string $path;
