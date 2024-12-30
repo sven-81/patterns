@@ -6,5 +6,5 @@ namespace patterns\creational\abstractFactory;
 
 interface TemplateRenderer
 {
-    public function render(string $templateString, array $arguments = []): string;
+    public function render(PageTemplate $pageTemplate): string;
 }

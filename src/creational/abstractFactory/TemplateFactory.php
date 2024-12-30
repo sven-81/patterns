@@ -6,10 +6,17 @@ namespace patterns\creational\abstractFactory;
 
 interface TemplateFactory
 {
-    public function createTitleTemplate(): TitleTemplate;
+    public function createTitleTemplate(string $title): TitleTemplate;
 
 
-    public function createPageTemplate(): PageTemplate;
+    public function createPageTemplate(
+        string $title,
+        string $content,
+        PictureTemplate $picture
+    ): PageTemplate;
+
+
+    public function createPictureTemplate(): PictureTemplate;
 
 
     public function getRenderer(): TemplateRenderer;

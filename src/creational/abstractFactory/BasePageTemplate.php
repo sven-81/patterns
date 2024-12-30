@@ -6,7 +6,10 @@ namespace patterns\creational\abstractFactory;
 
 abstract class BasePageTemplate implements PageTemplate
 {
-    public function __construct(protected TitleTemplate $titleTemplate)
-    {
+    public function __construct(
+        protected TitleTemplate $titleTemplate,
+        protected readonly string $content,
+        protected PictureTemplate $pictureTemplate
+    ) {
     }
 }

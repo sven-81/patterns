@@ -6,20 +6,19 @@ namespace patterns\creational\abstractFactory;
 
 class Page
 {
-    public function __construct(private readonly TitleTemplate $title, private readonly string $content)
-    {
+    public function __construct(
+        private readonly string $title,
+        private readonly string $content,
+        private readonly PictureTemplate $picture
+    ) {
     }
 
 
     public function render(TemplateFactory $factory): string
     {
-        $pageTemplate = $factory->createPageTemplate();
-
+        $pageTemplate = $factory->createPageTemplate($this->title, $this->content, $this->picture);
         $renderer = $factory->getRenderer();
 
-        return $renderer->render($pageTemplate->getTemplateString(), [
-            'title' => $this->title,
-            'content' => $this->content,
-        ]);
+        return $renderer->render($pageTemplate);
     }
 }
