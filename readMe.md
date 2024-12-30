@@ -31,7 +31,12 @@
         - Erzeugung unveränderlicher Objekte
         - Single Responsibility Principle
 4. Prototype
-    - todo
+    - Ziel:
+      - statt Objekte jedes Mal neu zu erzeugen, wird ein vorhandener Master geklont
+      - Möglichkeit von vielfältigen Varianten eines Objekts
+      - Reduktion von Objektinstanziierungscode
+      - Möglichkeit komplexe Objekterstellungslogik von der Client-Seite zu kapseln
+      - Shallow vs. Deep Cloning: Das Prototype Pattern ermöglicht es, tiefere oder flachere Kopien von Objekten zu erstellen, je nach Bedarf
 5. Singleton
     - todo
 
