@@ -6,7 +6,7 @@ namespace patterns\creational\singleton;
 
 class Config extends Singleton
 {
-    private $configList = [];
+    private array $configList = [];
 
 
     public function getValue(string $key): string

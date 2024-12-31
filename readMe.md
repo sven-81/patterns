@@ -3,6 +3,7 @@
 - https://designpatternsphp.readthedocs.io/de/latest
 - https://github.com/kamranahmedse/design-patterns-for-humans
 - https://refactoring.guru/design-patterns
+- https://sourcemaking.com/design_patterns
 
 ---
 
@@ -105,14 +106,50 @@
         - **Lock File:** Eine einzige Instanz eines Lockfiles, das sicherstellt, dass nur eine Instanz der Anwendung auf
           dem System läuft.
 
+6. Pool
+    - Ziel:
+      - verwaltet und optimiert Ressourcen, die teuer in Erstellung und Zerstörung sind
+      - Objekte sind wiederverwendbar
+      - nur benötigte Ressourcen werden erstellt; maximale Anzahl kann begrenzt werden
+      - Performance-Verbesserung
+    - Beispiele:
+      - **Verbindungen zu Datenbanken**
+      - **Threads**
+      - **Socketverbindungen**
+      - **File-Handles**
+      - **Cache-Objekte**
+      - **Grafikobjekten wie Schriften oder Bitmaps**
+
 ---
 
 **Structural**
 
 - todo
+Adapter
+Bridge
+Composite
+Decorator
+Facade
+Flyweight
+Private Class Data
+Proxy
+
+
 
 ---
 
 **Behavioral**
 
 - todo
+Chain of responsibility
+Command
+Interpreter
+Iterator
+Mediator
+Memento
+Null Object
+Observer
+State
+Strategy
+Template method
+Visitor

@@ -27,15 +27,4 @@ class Logger extends Singleton
         $logger = static::getInstance();
         $logger->writeLog($message);
     }
-
-
-    /*public function __construct(private readonly string $filePath)
-    {
-    }
-
-
-    public function log(string $message): void
-    {
-        file_put_contents($this->filePath, $message . PHP_EOL, FILE_APPEND);
-    }*/
 }
