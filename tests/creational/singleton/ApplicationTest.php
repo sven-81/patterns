@@ -22,7 +22,10 @@ class ApplicationTest extends TestCase
 
         $this->filePath = __DIR__ . '/../../../src/creational/singleton/log.file';
         $this->assertFileExists($this->filePath);
-        $this->expectOutputString('Logger is unique');
+        $this->expectOutputString(
+            'Logger is unique' . PHP_EOL
+            . 'Config singleton also works fine.' . PHP_EOL
+        );
     }
 
 
