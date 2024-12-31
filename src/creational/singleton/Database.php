@@ -23,13 +23,12 @@ final class Database
 
     private function __construct()
     {
-
     }
 
 
     private function __clone()
     {
-
+        throw new Exception("Cannot be cloned");
     }
 
 
