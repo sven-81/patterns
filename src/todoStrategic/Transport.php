@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace patterns\creational\factoryMethod;
+namespace patterns\todoStrategic;
 
 interface Transport
 {
