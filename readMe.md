@@ -125,7 +125,7 @@
 **Structural**
 
 - todo
-Adapter
+Adapter => #todo hier weiter: S.151
 Bridge
 Composite
 Decorator
