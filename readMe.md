@@ -171,11 +171,27 @@
      - Benutzeroberflächen (Buttons, Textfelder oder Panels)
      - DOM-Struktur
      - Lagerhaltung/Bücherschrank
-
+4. Data Mapper
+   - todo
+5. Decorator
+    - Ziel:
+      - Erweiterung der Funktionalität eines Objekts zur Laufzeit
+      - Verschiedene Varianten eines Objekts zur Laufzeit kombinieren
+      - Vermeidung von Subklassen/Vermeidung von Code-Duplikation
+      - Flexibles Hinzufügen von Verhalten
+      - Kombination mehrerer Verantwortlichkeiten
+    - Beispiele:
+      - GUIs/UI-Design und Styling
+      - Logging und Monitoring
+      - Payment-Systeme
+      - Datenkompression und Verschlüsselung
+      - Authentifizierung und Autorisierung
+      - Caching
+      - Datenvalidierung
+      - Transaktionsmanagement
 
 - todo
-4. Data Mapper
-5. Decorator
+
 6. Dependency Injection
 7. Fluent Interface
 8. Facade
