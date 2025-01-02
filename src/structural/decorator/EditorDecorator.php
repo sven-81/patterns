@@ -14,7 +14,6 @@ class EditorDecorator implements AddOn
     public function run(string $text): string
     {
         return  $this->editor->run($text);
-     #   return 'write: ' . $this->editor->run($text) . PHP_EOL;
     }
 
 

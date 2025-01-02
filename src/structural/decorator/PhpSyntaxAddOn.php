@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace patterns\structural\decorator;
 
-class LowerCaseConverterAddOn implements AddOn
+class PhpSyntaxAddOn implements AddOn
 {
     public function run(string $text): string
     {
-        return $text;
+        return '<?php ' . $text . ' ?>';
     }
 
 
     public function about(): void
     {
-        print ('Lower case converter addon is available');
+        print 'I have got the syntax for php' . PHP_EOL;
     }
 }
