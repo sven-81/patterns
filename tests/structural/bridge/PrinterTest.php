@@ -32,6 +32,9 @@ class PrinterTest extends TestCase
         $offsetPrinter2->get();
         $laserPrinter2->get();
 
+        $laserPrinter2->setImplementation($spotColorLayout);
+        $laserPrinter2->get();
+
         $this->expectOutputString(
             <<<'OUT'
 a layout in cmyk printed on offset printer
@@ -39,6 +42,7 @@ a layout in neon-green printed on laser printer
 
 a layout in neon-green printed on offset printer
 a layout in cmyk printed on laser printer
+a layout in neon-green printed on laser printer
 
 OUT
         );
