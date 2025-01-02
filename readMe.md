@@ -99,8 +99,7 @@
         - **Logger:** Ein zentrales Logging-System, das nur eine Instanz der Logger-Klasse im gesamten Programm
           verwendet.
         - **Konfigurationsmanager:** Eine zentrale Instanz zur Verwaltung von Konfigurationseinstellungen für die
-          gesamte
-          Anwendung.
+          gesamte Anwendung.
         - **Thread Handling:** Verwaltung und Synchronisation von Threads, bei denen nur eine Instanz für die gesamte
           Anwendung verwendet wird.
         - **Lock File:** Eine einzige Instanz eines Lockfiles, das sicherstellt, dass nur eine Instanz der Anwendung auf
@@ -108,17 +107,17 @@
 
 6. Pool
     - Ziel:
-      - verwaltet und optimiert Ressourcen, die teuer in Erstellung und Zerstörung sind
-      - Objekte sind wiederverwendbar
-      - nur benötigte Ressourcen werden erstellt; maximale Anzahl kann begrenzt werden
-      - Performance-Verbesserung
+        - verwaltet und optimiert Ressourcen, die teuer in Erstellung und Zerstörung sind
+        - Objekte sind wiederverwendbar
+        - nur benötigte Ressourcen werden erstellt; maximale Anzahl kann begrenzt werden
+        - Performance-Verbesserung
     - Beispiele:
-      - **Verbindungen zu Datenbanken**
-      - **Threads**
-      - **Socketverbindungen**
-      - **File-Handles**
-      - **Cache-Objekte**
-      - **Grafikobjekten wie Schriften oder Bitmaps**
+        - **Verbindungen zu Datenbanken**
+        - **Threads**
+        - **Socketverbindungen**
+        - **File-Handles**
+        - **Cache-Objekte**
+        - **Grafikobjekten wie Schriften oder Bitmaps**
 
 ---
 
@@ -126,59 +125,74 @@
 
 1. Adapter/Wrapper
     - Ziel:
-      - Kompatibilität ohne Änderung des bestehenden Codes (Open/Closed Principle)
-      - Flexibilität und Erweiterbarkeit anderer Schnittstellen (Open/Closed Principle)
-      - Vermeidung von Code-Duplizierung
-      - Einfachere Integration von Drittanbieter-Bibliotheken
-      - Trennung von Anliegen (Separation of Concerns)
-      - Einfacheres Testen und Mocken
+        - Kompatibilität ohne Änderung des bestehenden Codes (Open/Closed Principle)
+        - Flexibilität und Erweiterbarkeit anderer Schnittstellen (Open/Closed Principle)
+        - Vermeidung von Code-Duplizierung
+        - Einfachere Integration von Drittanbieter-Bibliotheken
+        - Trennung von Anliegen (Separation of Concerns)
+        - Einfacheres Testen und Mocken
     - Beispiele:
-      - Integration von Drittanbieter-Bibliotheken
-      - Migrationsprojekte, verschiedene API-Versionen, Datenbankmigration
-      - Kompatibilität zwischen unterschiedlichen Datenquellen (verschiedene Datenbanken, APIs...)
-      - Verwendung von Legacy-Code
-      - Verschiedene Kommunikationsprotokolle (REST, SOAP)
-      - Unterschiedliche Formatierungen/Datenkonvertierung (Json vs. XML)
-    
+        - Integration von Drittanbieter-Bibliotheken
+        - Migrationsprojekte, verschiedene API-Versionen, Datenbankmigration
+        - Kompatibilität zwischen unterschiedlichen Datenquellen (verschiedene Datenbanken, APIs...)
+        - Verwendung von Legacy-Code
+        - Verschiedene Kommunikationsprotokolle (REST, SOAP)
+        - Unterschiedliche Formatierungen/Datenkonvertierung (Json vs. XML)
+
+2. Bridge
+    - Ziel:
+        - Unabhängige Erweiterung der Abstraktion und Implementierung
+        - Reduziert die Anzahl von Klassen bei vielen Varianten durch Abstraktionen und Implementierungen (Single
+          Responsibility Principle)
+        - Erhöhte Flexibilität, da Abstraktion und Implementierung unabhängig voneinander verändert und erweitert
+          werden können (Open/Closed Principle)
+    - Beispiele:
+        - Grafik-Rendering
+        - Datenbankzugriffsschicht
+        - Multimedia-Player
+        - Benutzeroberflächen/UI-Frameworks
+        - Zahlungssysteme
+        - Spiel-Engines
+        - Dokumentenverarbeitungssysteme
+        - Fahrzeugverwaltungssysteme
+        - Reporting-Systeme
+        - Sprachübersetzungssysteme
 
 - todo
-Bridge
-Composite
-Data Mapper
-Decorator
-Dependency Injection
-Fluent Interface
-Facade
-Flyweight
-Private Class Data
-Proxy
-
-
+  Composite
+  Data Mapper
+  Decorator
+  Dependency Injection
+  Fluent Interface
+  Facade
+  Flyweight
+  Private Class Data
+  Proxy
 
 ---
 
 **Behavioral**
 
 - todo
-Chain of responsibility
-Command
-Interpreter
-Iterator
-Mediator
-Memento
-Null Object
-Observer
-Specification
-State
-Strategy
-Template method
-Visitor
+  Chain of responsibility
+  Command
+  Interpreter
+  Iterator
+  Mediator
+  Memento
+  Null Object
+  Observer
+  Specification
+  State
+  Strategy
+  Template method
+  Visitor
 
 ---
 
 **Other**
 
 - todo
-Service Locator
-Repository
-Entitäts-Attribut-Wert (EAV)
+  Service Locator
+  Repository
+  Entitäts-Attribut-Wert (EAV)
