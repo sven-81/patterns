@@ -141,7 +141,8 @@
 
 2. Bridge
     - Ziel:
-        - Unabhängige Erweiterung der Abstraktion und Implementierung
+        - Unabhängige Erweiterung der Abstraktion (was wird getan/unabhängig von der Technologie) und 
+          Implementierung (wie wird es getan/technologieabhängig)
         - Reduziert die Anzahl von Klassen bei vielen Varianten durch Abstraktionen und Implementierungen (Single
           Responsibility Principle)
         - Erhöhte Flexibilität, da Abstraktion und Implementierung unabhängig voneinander verändert und erweitert
