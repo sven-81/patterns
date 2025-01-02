@@ -159,41 +159,55 @@
         - Reporting-Systeme
         - Sprachübersetzungssysteme
 
+3. Composite
+   - Ziel:
+     - Modellieren von Hierarchien in Baumstruktur aus Objekten
+     - erhöht die Wiederverwendbarkeit und Flexibilität
+     - Abstraktion und vereinheitlichte Schnittstellen
+     - Vermeidung von Komplexität bei der Behandlung von Gruppen
+   - Beispiele:
+     - Dateisysteme
+     - Grafikbibliotheken
+     - Benutzeroberflächen (Buttons, Textfelder oder Panels)
+     - DOM-Struktur
+     - Lagerhaltung/Bücherschrank
+
+
 - todo
-  Composite
-  Data Mapper
-  Decorator
-  Dependency Injection
-  Fluent Interface
-  Facade
-  Flyweight
-  Private Class Data
-  Proxy
+4. Data Mapper
+5. Decorator
+6. Dependency Injection
+7. Fluent Interface
+8. Facade
+9. Flyweight
+10. Private Class Data
+11. Proxy
+
 
 ---
 
 **Behavioral**
 
 - todo
-  Chain of responsibility
-  Command
-  Interpreter
-  Iterator
-  Mediator
-  Memento
-  Null Object
-  Observer
-  Specification
-  State
-  Strategy
-  Template method
-  Visitor
+1. Chain of responsibility
+2. Command
+3. Interpreter
+4. Iterator
+5. Mediator
+6. Memento
+7. Null Object
+8. Observer
+9. Specification
+10. State
+11. Strategy
+12. Template method
+13. Visitor
 
 ---
 
 **Other**
 
 - todo
-  Service Locator
-  Repository
-  Entitäts-Attribut-Wert (EAV)
+1. Service Locator
+2. Repository
+3. Entitäts-Attribut-Wert (EAV)
