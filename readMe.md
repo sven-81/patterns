@@ -124,11 +124,30 @@
 
 **Structural**
 
+1. Adapter/Wrapper
+    - Ziel:
+      - Kompatibilität ohne Änderung des bestehenden Codes (Open/Closed Principle)
+      - Flexibilität und Erweiterbarkeit anderer Schnittstellen (Open/Closed Principle)
+      - Vermeidung von Code-Duplizierung
+      - Einfachere Integration von Drittanbieter-Bibliotheken
+      - Trennung von Anliegen (Separation of Concerns)
+      - Einfacheres Testen und Mocken
+    - Beispiele:
+      - Integration von Drittanbieter-Bibliotheken
+      - Migrationsprojekte, verschiedene API-Versionen, Datenbankmigration
+      - Kompatibilität zwischen unterschiedlichen Datenquellen (verschiedene Datenbanken, APIs...)
+      - Verwendung von Legacy-Code
+      - Verschiedene Kommunikationsprotokolle (REST, SOAP)
+      - Unterschiedliche Formatierungen/Datenkonvertierung (Json vs. XML)
+    
+
 - todo
-Adapter => #todo hier weiter: S.151
 Bridge
 Composite
+Data Mapper
 Decorator
+Dependency Injection
+Fluent Interface
 Facade
 Flyweight
 Private Class Data
@@ -149,7 +168,17 @@ Mediator
 Memento
 Null Object
 Observer
+Specification
 State
 Strategy
 Template method
 Visitor
+
+---
+
+**Other**
+
+- todo
+Service Locator
+Repository
+Entitäts-Attribut-Wert (EAV)
