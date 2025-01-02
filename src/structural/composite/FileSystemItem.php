@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace patterns\composite;
+namespace patterns\structural\composite;
 
 interface FileSystemItem
 {

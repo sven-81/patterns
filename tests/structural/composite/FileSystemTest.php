@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace patterns\composite;
+namespace patterns\structural\composite;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
