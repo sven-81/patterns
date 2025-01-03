@@ -227,9 +227,24 @@
         - Verwaltung von Singleton-Instanzen
         - Webanwendungen mit komplexen View-Komponenten
 
-- todo
-
 7. Facade
+    - Ziel:
+      - Vereinfachung der Interaktion mit einem komplexen Subsystem
+      - Reduzierung der Abhängigkeiten
+      - Förderung von Modulen und Entkopplung
+      - Verbesserung der Wartbarkeit und Erweiterbarkeit
+    - Beispiele:
+      - Komplexe Subsysteme in Softwarebibliotheken/Verwendung von Frameworks
+      - Datenbankzugriffs-Schicht (Methoden für CRUD-Operationen)
+      - Benutzeroberflächen-Komplexität
+      - Zugriff auf externe APIs
+      - Cloud-Service-Interaktionen
+      - Integration von Legacy-Systemen
+      - Multithreading und Parallelverarbeitung
+      - Datenverarbeitungs-Pipelines
+      - Sicherheits- und Authentifizierungsdienste
+
+- todo
 8. Fluent Interface
 9. Flyweight
 10. Private Class Data
