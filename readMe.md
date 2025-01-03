@@ -141,7 +141,7 @@
 
 2. Bridge
     - Ziel:
-        - Unabhängige Erweiterung der Abstraktion (was wird getan/unabhängig von der Technologie) und 
+        - Unabhängige Erweiterung der Abstraktion (was wird getan/unabhängig von der Technologie) und
           Implementierung (wie wird es getan/technologieabhängig)
         - Reduziert die Anzahl von Klassen bei vielen Varianten durch Abstraktionen und Implementierungen (Single
           Responsibility Principle)
@@ -160,35 +160,52 @@
         - Sprachübersetzungssysteme
 
 3. Composite
-   - Ziel:
-     - Modellieren von Hierarchien in Baumstruktur aus Objekten
-     - erhöht die Wiederverwendbarkeit und Flexibilität
-     - Abstraktion und vereinheitlichte Schnittstellen
-     - Vermeidung von Komplexität bei der Behandlung von Gruppen
-   - Beispiele:
-     - Dateisysteme
-     - Grafikbibliotheken
-     - Benutzeroberflächen (Buttons, Textfelder oder Panels)
-     - DOM-Struktur
-     - Lagerhaltung/Bücherschrank
+    - Ziel:
+        - Modellieren von Hierarchien in Baumstruktur aus Objekten
+        - erhöht die Wiederverwendbarkeit und Flexibilität
+        - Abstraktion und vereinheitlichte Schnittstellen
+        - Vermeidung von Komplexität bei der Behandlung von Gruppen
+    - Beispiele:
+        - Dateisysteme
+        - Grafikbibliotheken
+        - Benutzeroberflächen (Buttons, Textfelder oder Panels)
+        - DOM-Struktur
+        - Lagerhaltung/Bücherschrank
+
 4. Data Mapper
-   - todo
+    - Ziel:
+        - klare Trennung zwischen der Datenbank/Persistenz und der Domänenlogik (Separation of Concerns)
+        - Datenpersistenz abstrahieren
+        - Ermöglichung von Tests und Wartbarkeit
+        - Flexibilität in Bezug auf Datenquellen
+        - Reduzierung der Komplexität durch Vermeidung von direkten Datenbankzugriffen in der Domänenlogik
+    - Beispiele:
+        - CRM-Systeme
+        - mehrere Datenquellen
+        - Datenbankwechsel
+        - Komplexe Entitäten mit umfangreichen Beziehungen
+        - Langsame oder asynchrone Datenbankabfragen
+        - Wiederverwendbarkeit von Domänenmodellen
+        - Legacy-Systeme
+        - Datenvalidierung und -transformation
+        - Testbarkeit von Geschäftslogik
+
 5. Decorator
     - Ziel:
-      - Erweiterung der Funktionalität eines Objekts zur Laufzeit
-      - Verschiedene Varianten eines Objekts zur Laufzeit kombinieren
-      - Vermeidung von Subklassen/Vermeidung von Code-Duplikation
-      - Flexibles Hinzufügen von Verhalten
-      - Kombination mehrerer Verantwortlichkeiten
+        - Erweiterung der Funktionalität eines Objekts zur Laufzeit
+        - Verschiedene Varianten eines Objekts zur Laufzeit kombinieren
+        - Vermeidung von Subklassen/Vermeidung von Code-Duplikation
+        - Flexibles Hinzufügen von Verhalten
+        - Kombination mehrerer Verantwortlichkeiten
     - Beispiele:
-      - GUIs/UI-Design und Styling
-      - Logging und Monitoring
-      - Payment-Systeme
-      - Datenkompression und Verschlüsselung
-      - Authentifizierung und Autorisierung
-      - Caching
-      - Datenvalidierung
-      - Transaktionsmanagement
+        - GUIs/UI-Design und Styling
+        - Logging und Monitoring
+        - Payment-Systeme
+        - Datenkompression und Verschlüsselung
+        - Authentifizierung und Autorisierung
+        - Caching
+        - Datenvalidierung
+        - Transaktionsmanagement
 
 - todo
 
@@ -199,12 +216,12 @@
 10. Private Class Data
 11. Proxy
 
-
 ---
 
 **Behavioral**
 
 - todo
+
 1. Chain of responsibility
 2. Command
 3. Interpreter
@@ -224,6 +241,7 @@
 **Other**
 
 - todo
+
 1. Service Locator
 2. Repository
 3. Entitäts-Attribut-Wert (EAV)
