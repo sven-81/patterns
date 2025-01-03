@@ -207,11 +207,30 @@
         - Datenvalidierung
         - Transaktionsmanagement
 
+6. Dependency Injection
+    - Ziel:
+        - Abhängigkeiten einer Klasse von außen bereitzustellen
+        - Reduzierung der Kopplung (Loose Coupling)
+        - Erhöhung der Wartbarkeit, Testbarkeit und Lesbarkeit des Codes
+    - Beispiele:
+        - Komplexe Software-Architekturen (z.B. MVC)
+        - Unit-Tests und Mocking
+        - Ersetzen von Implementierungen (z.B. Persistenz)
+        - Verwaltung von Konfigurationen
+        - Webanwendungen und Middleware
+        - Ereignisgesteuerte Systeme und Listener  (Event-Driven Architecture)
+        - Verwendung von Services und externen APIs (z.B. Zahlungs-Gateways oder E-Mail-Dienste)
+        - Verwaltung von Zustandsabhängigkeiten/Stateful (Session- oder Cache-Verwaltung)
+        - Verwendung von Factories und Buildern
+        - Dependency Injection in Microservices
+        - Integration mit Dependency Injection Containern in Frameworks
+        - Verwaltung von Singleton-Instanzen
+        - Webanwendungen mit komplexen View-Komponenten
+
 - todo
 
-6. Dependency Injection
-7. Fluent Interface
-8. Facade
+7. Facade
+8. Fluent Interface
 9. Flyweight
 10. Private Class Data
 11. Proxy
