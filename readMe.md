@@ -229,26 +229,65 @@
 
 7. Facade
     - Ziel:
-      - Vereinfachung der Interaktion mit einem komplexen Subsystem
-      - Reduzierung der Abhängigkeiten
-      - Förderung von Modulen und Entkopplung
-      - Verbesserung der Wartbarkeit und Erweiterbarkeit
+        - Vereinfachung der Interaktion mit einem komplexen Subsystem
+        - Reduzierung der Abhängigkeiten
+        - Förderung von Modulen und Entkopplung
+        - Verbesserung der Wartbarkeit und Erweiterbarkeit
     - Beispiele:
-      - Komplexe Subsysteme in Softwarebibliotheken/Verwendung von Frameworks
-      - Datenbankzugriffs-Schicht (Methoden für CRUD-Operationen)
-      - Benutzeroberflächen-Komplexität
-      - Zugriff auf externe APIs
-      - Cloud-Service-Interaktionen
-      - Integration von Legacy-Systemen
-      - Multithreading und Parallelverarbeitung
-      - Datenverarbeitungs-Pipelines
-      - Sicherheits- und Authentifizierungsdienste
+        - Komplexe Subsysteme in Softwarebibliotheken/Verwendung von Frameworks
+        - Datenbankzugriffs-Schicht (Methoden für CRUD-Operationen)
+        - Benutzeroberflächen-Komplexität
+        - Zugriff auf externe APIs
+        - Cloud-Service-Interaktionen
+        - Integration von Legacy-Systemen
+        - Multithreading und Parallelverarbeitung
+        - Datenverarbeitungs-Pipelines
+        - Sicherheits- und Authentifizierungsdienste
+
+8. Fluent Interface
+    - Ziel:
+        - Lesbarkeit und Klarheit durch Ketten von Methodenaufrufen in einer natürlichen Sprache
+        - Vereinfachung der Syntax in eleganter und verständlicher Weise
+        - Ketten von Methodenaufrufen durch Rückgabe des Objekts selbst
+    - Beispiele:
+        - Builder-Pattern (Objektaufbau)
+        - Konfiguration von Objekten oder Komponenten
+        - Erstellung von SQL-Abfragen
+        - API- und HTTP-Client-Aufrufe
+        - Test- und Mocking-Frameworks
+        - Logging- und Debugging-Tools
+        - Event-Handling und Listener
+        - Schrittweise Berechnungen oder mathematische Operationen
+        - Workflow- oder Prozesssteuerung
+
+
+9. Flyweight
+    - Ziel:
+        - Speicheroptimierung durch zentrale Speicherung gemeinsamer Daten (die nicht für jede Instanz einzigartig sind)
+        - Reduzierung der Objektinstanzen dadurch, dass nur die variablen Teile der Objekte gespeichert werden
+          ("Extrinsic State")
+        - Steigerung der Performance
+        - Flexibilität bei der Trennung von intrinsischen (unveränderlichen gemeinsamen Daten) und extrinsischen
+          (veränderlichen kontextabhängigen Daten)
+          Zuständen
+        - Förderung der Wiederverwendbarkeit von Objekten
+    - Beispiel:
+      - Grafische Benutzeroberflächen (GUI)
+      - Spiele (Spielobjekte und Charaktere)
+      - Textverarbeitung und Schriftarten
+      - Datenbanken und Abfragen
+      - Drucken von Dokumenten (Druck-Rendering)
+      - Rendering von 2D- und 3D-Grafiken
+      - Symbolische Repräsentation in großen Anwendungen
+      - Verwaltung von Zuständen in Benutzeroberflächen
+      - Verwaltung von grafischen Mustern oder Texturen in Spielen
+      - Verwaltung von Icons oder Symbole in Softwareanwendungen
+
+10. Private Class Data
+    https://sourcemaking.com/design_patterns/private_class_data
+11. Proxy
 
 - todo
-8. Fluent Interface
-9. Flyweight
-10. Private Class Data
-11. Proxy
 
 ---
 
