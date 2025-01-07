@@ -24,7 +24,7 @@ class Application
         if ($classOneLogger === $classTwoLogger) {
             $message = 'Logger is unique';
             Logger::log($message);
-            print $message . PHP_EOL;
+            echo $message . PHP_EOL;
         } else {
             throw new LogicException('Loggers are different.');
         }
@@ -45,7 +45,7 @@ class Application
             $path === $configB->getValue('lalaPath')
         ) {
             Logger::log('Config singleton also works fine.');
-            print 'Config singleton also works fine.' . PHP_EOL;
+            echo 'Config singleton also works fine.' . PHP_EOL;
         }
     }
 }

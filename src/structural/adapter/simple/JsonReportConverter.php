@@ -13,7 +13,7 @@ class JsonReportConverter extends XmlReport
 
     public function display(): void
     {
-        print 'I am the adapter for json reports to convert into xml reports: ' . PHP_EOL
+        echo 'I am the adapter for json reports to convert into xml reports: ' . PHP_EOL
             . $this->report->create();
     }
 }

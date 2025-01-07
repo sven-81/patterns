@@ -8,6 +8,6 @@ class OffsetPrinter extends Printer
 {
     public function get(): void
     {
-        print $this->implementation->render('printed on offset printer' . PHP_EOL);
+        echo $this->implementation->render('printed on offset printer' . PHP_EOL);
     }
 }

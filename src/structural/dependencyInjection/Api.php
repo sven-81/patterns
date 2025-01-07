@@ -8,6 +8,6 @@ class Api
 {
     public function doSomething(string $string): void
     {
-        print $string;
+        echo $string;
     }
 }

@@ -11,13 +11,13 @@ class SimpleProductOrder extends OrderPrototype
 
     public function __clone()
     {
-        print 'Cloned simple product' . PHP_EOL;
+        echo 'Cloned simple product' . PHP_EOL;
     }
 
 
     final public function about(): void
     {
-        print 'Id: ' . $this->id .
+        echo 'Id: ' . $this->id .
             ', Category: ' . $this->category .
             ', Quantity: ' . $this->quantity . PHP_EOL;
     }

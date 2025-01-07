@@ -8,6 +8,6 @@ class LaserPrinter extends Printer
 {
     public function get(): void
     {
-        print $this->implementation->render('printed on laser printer' . PHP_EOL);
+        echo $this->implementation->render('printed on laser printer' . PHP_EOL);
     }
 }

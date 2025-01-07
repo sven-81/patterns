@@ -16,7 +16,7 @@ class ShapeFactory
         $key = $type . '|' . $texture;
         if (!array_key_exists($key, $this->shapes)) {
             $this->shapes[$key] = new Shape3D($type, $texture);
-            print 'created new 3D ' . $type . ' with ' . $texture . ' texture.' . PHP_EOL;
+            echo 'created new 3D ' . $type . ' with ' . $texture . ' texture.' . PHP_EOL;
         }
 
         return $this->shapes[$key];

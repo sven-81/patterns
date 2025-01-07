@@ -14,7 +14,7 @@ class Bear implements Present
 
     public function checkSound(): void
     {
-        print 'Roarrr!' . PHP_EOL;
+        echo 'Roarrr!' . PHP_EOL;
     }
 
 

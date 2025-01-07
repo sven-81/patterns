@@ -8,6 +8,6 @@ class XmlReport
 {
     public function display(): void
     {
-        print 'I am XML report';
+        echo 'I am XML report';
     }
 }

@@ -15,9 +15,9 @@ class HandymanElf implements Elf
     {
         $this->isBusy = true;
 
-        print 'I am a handyman and I wrap:' . PHP_EOL;
-        print $present->addRecipientsAge();
-        print $present->about() . PHP_EOL;
+        echo 'I am a handyman and I wrap:' . PHP_EOL;
+        echo $present->addRecipientsAge();
+        echo $present->about() . PHP_EOL;
     }
 
 

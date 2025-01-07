@@ -8,14 +8,14 @@ class Truck implements Transport
 {
     public function deliver(Present $mail): void
     {
-        print 'I am a truck and I delivered: ' . PHP_EOL;
-        print $mail->about();
-        print $mail->addRecipientsAge();
+        echo 'I am a truck and I delivered: ' . PHP_EOL;
+        echo $mail->about();
+        echo $mail->addRecipientsAge();
     }
 
 
     public function returnToSender(Present $mail): void
     {
-        print 'returned to Sender, cannot handle Mail type: ' . get_class($mail) . PHP_EOL;
+        echo 'returned to Sender, cannot handle Mail type: ' . get_class($mail) . PHP_EOL;
     }
 }

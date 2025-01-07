@@ -13,7 +13,7 @@ class SomeWorker
     {
         $length = strlen($text);
         for ($i = 0; $i < $length; $i++) {
-            print '.';
+            echo '.';
         }
 
         usleep(self::HALF_SECOND);

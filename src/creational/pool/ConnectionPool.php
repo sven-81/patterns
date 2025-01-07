@@ -37,7 +37,7 @@ class ConnectionPool
     public function releaseConnection(DatabaseConnection $connection): void
     {
         $this->pool[] = $connection;
-        print 'Verbindung erfolgreich in den Pool gelegt.' . PHP_EOL;
+        echo 'Verbindung erfolgreich in den Pool gelegt.' . PHP_EOL;
     }
 
 

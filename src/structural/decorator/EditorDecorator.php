@@ -19,6 +19,6 @@ class EditorDecorator implements AddOn
 
     public function about(): void
     {
-        print 'I am text editor' . PHP_EOL;
+        echo 'I am text editor' . PHP_EOL;
     }
 }

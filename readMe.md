@@ -260,7 +260,6 @@
         - Schrittweise Berechnungen oder mathematische Operationen
         - Workflow- oder Prozesssteuerung
 
-
 9. Flyweight
     - Ziel:
         - Speicheroptimierung durch zentrale Speicherung gemeinsamer Daten (die nicht für jede Instanz einzigartig sind)
@@ -285,7 +284,7 @@
 
 10. Private Class Data
     - Ziel:
-      - Datenkapselung: Sicherstellung, dass nur die Methoden der Klasse auf diese Daten zugreifen können
+      - Datenkapselung: Trennung von Geschäftslogik und Daten-Klassen
       - Zugriffssteuerung: Getter und Setter mit Validierung
       - Vermeidung von Seiteneffekten: private Daten können nicht von außenstehenden Komponenten verändert werden
       - Erleichterung der Wartbarkeit und Erweiterbarkeit

@@ -19,6 +19,6 @@ class File implements FileSystemItem
 
     public function display(int $depth = 0): void
     {
-        print str_repeat('-', $depth) . $this->getName() . PHP_EOL;
+        echo str_repeat('-', $depth) . $this->getName() . PHP_EOL;
     }
 }

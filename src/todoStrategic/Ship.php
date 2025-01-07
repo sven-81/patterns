@@ -13,9 +13,9 @@ class Ship implements Transport
     {
         $this->emptyStorage = false;
 
-        print 'I am a ship and I delivered: ' . PHP_EOL;
-        print $mail->about();
-        print $mail->addRecipientsAge();
+        echo 'I am a ship and I delivered: ' . PHP_EOL;
+        echo $mail->about();
+        echo $mail->addRecipientsAge();
     }
 
 

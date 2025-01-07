@@ -14,6 +14,6 @@ class LowerCaseConverterDecorator extends EditorDecorator
 
     public function about(): void
     {
-        print 'I write everything in lower case' . PHP_EOL;
+        echo 'I write everything in lower case' . PHP_EOL;
     }
 }

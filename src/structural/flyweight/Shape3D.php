@@ -16,6 +16,6 @@ class Shape3D
 
     public function render(Dimensions $dimensions): void
     {
-        print 'Rendering a ' . $this->texture . ' ' . $this->type . $dimensions->render() . PHP_EOL;
+        echo 'Rendering a ' . $this->texture . ' ' . $this->type . $dimensions->render() . PHP_EOL;
     }
 }

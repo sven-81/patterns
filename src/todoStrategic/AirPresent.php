@@ -14,7 +14,7 @@ class AirPresent implements Present
 
     public function stamp(): void
     {
-        print 'STAMP!' . PHP_EOL;
+        echo 'STAMP!' . PHP_EOL;
     }
 
 

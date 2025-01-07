@@ -14,6 +14,6 @@ class PhpSyntaxAddOn implements AddOn
 
     public function about(): void
     {
-        print 'I have got the syntax for php' . PHP_EOL;
+        echo 'I have got the syntax for php' . PHP_EOL;
     }
 }

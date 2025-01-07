@@ -8,12 +8,12 @@ class Car implements Driveable
 {
     public function drive(): void
     {
-        print 'I am a driving car' . PHP_EOL;
+        echo 'I am a driving car' . PHP_EOL;
     }
 
 
     public function stop(): void
     {
-        print 'I am car stopped driving.' . PHP_EOL;
+        echo 'I am car stopped driving.' . PHP_EOL;
     }
 }

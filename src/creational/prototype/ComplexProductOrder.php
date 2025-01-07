@@ -27,13 +27,13 @@ class ComplexProductOrder extends OrderPrototype
     public function __clone()
     {
         $this->date = $this->clock;
-        print 'Cloned complex product order' . PHP_EOL;
+        echo 'Cloned complex product order' . PHP_EOL;
     }
 
 
     final public function about(): void
     {
-        print 'Id: ' . $this->id .
+        echo 'Id: ' . $this->id .
             ', Category: ' . $this->category .
             ', Quantity: ' . $this->quantity .
             ', date: ' . $this->date->format('h:i:s') . PHP_EOL;

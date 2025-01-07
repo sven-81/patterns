@@ -24,7 +24,7 @@ class PrinterTest extends TestCase
         $offsetPrinter->get();
         $laserPrinter->get();
 
-        print PHP_EOL;
+        echo PHP_EOL;
 
         $offsetPrinter2 = new OffsetPrinter($spotColorLayout);
         $laserPrinter2 = new LaserPrinter($cmykLayout);

@@ -18,9 +18,9 @@ class CarTest extends TestCase
         $car2 = $carPrototype->clone();
         $car2->setColor('pink');
 
-        print 'Prototype: ' . $carPrototype->aboutCar();
-        print 'Car1: ' . $car1->aboutCar();
-        print 'Car2: ' . $car2->aboutCar();
+        echo 'Prototype: ' . $carPrototype->aboutCar();
+        echo 'Car1: ' . $car1->aboutCar();
+        echo 'Car2: ' . $car2->aboutCar();
 
         $this->expectOutputString(
             'Prototype: Color: black, Model: Reitwagen, ' .

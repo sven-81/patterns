@@ -16,6 +16,6 @@ class JsonFormatterDecorator extends EditorDecorator
 
     public function about(): void
     {
-        print 'I write jsons' . PHP_EOL;
+        echo 'I write jsons' . PHP_EOL;
     }
 }
