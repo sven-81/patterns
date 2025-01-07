@@ -284,7 +284,21 @@
       - Verwaltung von Icons oder Symbole in Softwareanwendungen
 
 10. Private Class Data
-    https://sourcemaking.com/design_patterns/private_class_data
+    - Ziel:
+      - Datenkapselung: Sicherstellung, dass nur die Methoden der Klasse auf diese Daten zugreifen können
+      - Zugriffssteuerung: Getter und Setter mit Validierung
+      - Vermeidung von Seiteneffekten: private Daten können nicht von außenstehenden Komponenten verändert werden
+      - Erleichterung der Wartbarkeit und Erweiterbarkeit
+      - Förderung von gutem Design und sauberen Schnittstellen
+    - Beispiele:
+      - Bankkonten und Finanzsysteme
+      - Benutzerkonten und Authentifizierungssysteme
+      - Konfigurations- und Einstellungsverwaltung
+      - Spiele (Spielzustand, Spielerfortschritt)
+      - Inventarsysteme
+      - Medizinische Daten und Gesundheitsmanagement
+      - Datenbankoperationen (DB-Verbindung und Transaktionen)
+      - Warenkorb-System (E-Commerce)
 11. Proxy
 
 - todo
