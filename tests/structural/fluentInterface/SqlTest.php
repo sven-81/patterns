@@ -7,7 +7,7 @@ namespace patterns\structural\fluentInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
-#[CoversClass(SqlTest::class)]
+#[CoversClass(Sql::class)]
 class SqlTest extends TestCase
 {
     public function testCanBeUsedAsString(): void
