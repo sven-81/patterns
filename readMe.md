@@ -271,36 +271,79 @@
           Zuständen
         - Förderung der Wiederverwendbarkeit von Objekten
     - Beispiel:
-      - Grafische Benutzeroberflächen (GUI)
-      - Spiele (Spielobjekte und Charaktere)
-      - Textverarbeitung und Schriftarten
-      - Datenbanken und Abfragen
-      - Drucken von Dokumenten (Druck-Rendering)
-      - Rendering von 2D- und 3D-Grafiken
-      - Symbolische Repräsentation in großen Anwendungen
-      - Verwaltung von Zuständen in Benutzeroberflächen
-      - Verwaltung von grafischen Mustern oder Texturen in Spielen
-      - Verwaltung von Icons oder Symbole in Softwareanwendungen
+        - Grafische Benutzeroberflächen (GUI)
+        - Spiele (Spielobjekte und Charaktere)
+        - Textverarbeitung und Schriftarten
+        - Datenbanken und Abfragen
+        - Drucken von Dokumenten (Druck-Rendering)
+        - Rendering von 2D- und 3D-Grafiken
+        - Symbolische Repräsentation in großen Anwendungen
+        - Verwaltung von Zuständen in Benutzeroberflächen
+        - Verwaltung von grafischen Mustern oder Texturen in Spielen
+        - Verwaltung von Icons oder Symbole in Softwareanwendungen
 
 10. Private Class Data
     - Ziel:
-      - Datenkapselung: Trennung von Geschäftslogik und Daten-Klassen
-      - Zugriffssteuerung: Getter und Setter mit Validierung
-      - Vermeidung von Seiteneffekten: private Daten können nicht von außenstehenden Komponenten verändert werden
-      - Erleichterung der Wartbarkeit und Erweiterbarkeit
-      - Förderung von gutem Design und sauberen Schnittstellen
+        - Datenkapselung: Trennung von Geschäftslogik und Daten-Klassen
+        - Zugriffssteuerung: Getter und Setter mit Validierung
+        - Vermeidung von Seiteneffekten: private Daten können nicht von außenstehenden Komponenten verändert werden
+        - Erleichterung der Wartbarkeit und Erweiterbarkeit
+        - Förderung von gutem Design und sauberen Schnittstellen
     - Beispiele:
-      - Bankkonten und Finanzsysteme
-      - Benutzerkonten und Authentifizierungssysteme
-      - Konfigurations- und Einstellungsverwaltung
-      - Spiele (Spielzustand, Spielerfortschritt)
-      - Inventarsysteme
-      - Medizinische Daten und Gesundheitsmanagement
-      - Datenbankoperationen (DB-Verbindung und Transaktionen)
-      - Warenkorb-System (E-Commerce)
-11. Proxy
+        - Bankkonten und Finanzsysteme
+        - Benutzerkonten und Authentifizierungssysteme
+        - Konfigurations- und Einstellungsverwaltung
+        - Spiele (Spielzustand, Spielerfortschritt)
+        - Inventarsysteme
+        - Medizinische Daten und Gesundheitsmanagement
+        - Datenbankoperationen (DB-Verbindung und Transaktionen)
+        - Warenkorb-System (E-Commerce)
 
-- todo
+11. Proxy
+    - Ziel:
+        - Zugriffssteuerung: kontrollierter Zugriff auf ein Objekt, bevor Zugriff auf Zielobjekt erfolgt
+        - Lazy Loading: Ressourcen dann laden, wenn sie benötigt werden
+        - Performance-Optimierung durch Caching-Mechanismen oder Ausführen teurer Operationen on-Demand
+        - Virtueller Proxy als Platzhalter für ein teures oder ressourcenintensives Objekt
+        - Remote Proxy wenn Zielobjekt auf anderem Server oder in anderem Prozess existiert
+        - Security Proxy mit eingeschränktem oder überwachtem Zugriff
+    - Beispiele:
+        - Zugriffssteuerung (Security Proxy): Eine Anwendung, die vertrauliche Daten verarbeitet, könnte einen Proxy
+          verwenden, der vor dem Zugriff auf die sensiblen Daten überprüft, ob der Benutzer über die richtigen
+          Berechtigungen verfügt (z. B. Rollen oder Tokens).
+        - Lazy Loading (Virtueller Proxy): große Datenmengen, z. B. in einer E-Commerce-Anwendung, könnte ein Proxy
+          dafür sorgen, dass eine Datenbankabfrage nur dann ausgeführt wird, wenn die entsprechenden Daten wirklich
+          angezeigt werden müssen
+        - Performance-Optimierung durch Caching (Virtueller Proxy): Proxy speichert das Ergebnis einer langwierigen
+          Berechnung oder einer Datenbankabfrage, sodass bei nachfolgenden Zugriffen auf die gleichen Daten das Ergebnis
+          aus dem Cache zurückgegeben wird
+        - Remote Proxy: nwendung, die auf einen entfernten Server zugreift (z. B. über eine API), könnte einen Remote
+          Proxy verwenden, der die Kommunikation mit dem Server abstrahiert und als Stellvertreter fungiert, ohne dass
+          der Client sich um Details der Netzwerkverbindung kümmern muss
+        - Verstecken der Komplexität (Façade Proxy): roxy, der Zugriff auf ein komplexes Subsystem bietet, wie z. B.
+          ein Zahlungs-Gateway. Der Proxy könnte eine einfache API zur Verfügung stellen, die dem Benutzer die Details
+          der Interaktion mit dem Gateway erspart.
+        - Verhindern von Missbrauch (Schutz-Proxy): Webanwendung könnte ein Proxy sicherstellen, dass alle
+          Benutzereingaben validiert und gegen SQL-Injection oder Cross-Site-Scripting (XSS) abgesichert sind, bevor die
+          Eingaben an die zugrunde liegende Logik weitergeleitet werden.
+        - Überwachung und Logging (Proxy für Logging)
+        - Datenkompression (Proxy für Datenkompression):  Proxy könnte in einem System, das mit großen Dateien oder
+          Mediendaten arbeitet, für die Kompression von Daten zuständig sein, bevor sie an den Client oder Server
+          weitergegeben werden, um Bandbreite und Ladezeiten zu sparen.
+        - Virtuelle Maschinen oder Container (Proxy für Virtualisierung): Proxy könnte als Vermittler zwischen einem
+          Client und einer virtuellen Maschine fungieren, um den Zugriff zu abstrahieren, den Zustand zu überwachen oder
+          bestimmte Verwaltungsaufgaben zu automatisieren.
+        - Multithreading / Synchronisation (Proxy zur Thread-Synchronisation): Proxy könnte als
+          Synchronisationsmechanismus für ein gemeinsam genutztes Objekt fungieren, das von mehreren Threads
+          gleichzeitig verwendet wird, indem er sicherstellt, dass immer nur ein Thread gleichzeitig auf das Zielobjekt
+          zugreifen kann.
+        - Firewall oder Sicherheitsfilter (Proxy für Sicherheitskontrollen): Proxy könnte als Sicherheitsfilter
+          fungieren, der prüft, ob eingehende Netzwerkverkehrsdaten einer bestimmten Richtlinie entsprechen (z. B. keine
+          schädlichen Anfragen oder Angriffe enthalten).
+
+12. Registry:
+    - Anti-Pattern wie hier beschrieben:
+      https://designpatternsphp.readthedocs.io/de/latest/Structural/Registry/README.html
 
 ---
 
