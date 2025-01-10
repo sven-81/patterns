@@ -345,6 +345,8 @@
     - Anti-Pattern wie hier beschrieben:
       https://designpatternsphp.readthedocs.io/de/latest/Structural/Registry/README.html
 
+? Composite Method (Variante des Composite)
+
 ---
 
 **Behavioral**
@@ -366,10 +368,35 @@
         - Dokumentenverarbeitung
         - Datenvalidierung
 
+2. Command
+    - Ziel:
+      - Kapselung von Anfragen als Objekte
+      - Ermöglicht die Undo/Redo-Operationen
+      - Ermöglicht eine einfache Verlängerung der Operationen
+      - Entkopplung von Sender und Empfänger
+      - Batch-Verarbeitung und Aufruf von mehreren Befehlen
+      - Parameterisierung von Objekten mit Befehlen
+      - Implementierung von Triggern und Ereignissteuerung
+      - Vereinfachung der Implementierung von Transaktionen
+    - Beispiele:
+      - Undo/Redo-Funktionalität: Apps wie Texteditoren oder Grafikbearbeitungsprogramme
+      - Automatisierung von Aufgaben durch Makro- und Batch-Verarbeitung
+      - Benutzeroberfläche (UI) und Geschäftslogik
+      - Datenbank-Transaktionen
+      - Event-Trigger-Systeme wie Zahlungsabwicklung, Bestandsprüfung, Versandanforderung
+      - Zeitgesteuerte Aufgaben oder wiederkehrende Aufgaben, Cron-Jobs
+      - Webanwendungen mit komplexen Formularen und Aktionen
+      - Bewegungssteuerung und Spielaktionen
+      - Webhooks und Benachrichtigungen
+      - Microservices-Kommunikation und -Interaktionen über Messaging-Systeme (z. B. Kafka, RabbitMQ)
+      
+
 - todo
 
-2. Command
 3. Interpreter
+    - Ziel:
+    - Beispiele:
+
 4. Iterator
 5. Mediator
 6. Memento
@@ -380,6 +407,9 @@
 11. Strategy
 12. Template method
 13. Visitor
+    ? Asynchronous Method Invocation
+    ? Event Sourcing
+    ? Resilience
 
 ---
 
@@ -390,3 +420,5 @@
 1. Service Locator
 2. Repository
 3. Entitäts-Attribut-Wert (EAV)
+   ? CQRS (Command Query Responsibility Segregation)
+   ? Lazy Initialization
