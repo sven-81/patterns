@@ -349,9 +349,25 @@
 
 **Behavioral**
 
+1. Chain of responsibility
+    - Ziele:
+        - Vermeidung der direkten Kopplung zwischen Sender und Empfänger
+        - Flexibles Hinzufügen und Entfernen von Handlungsobjekten
+        - Reduzierung der Kopplung
+        - Verarbeitung von Anfragen in der richtigen Reihenfolge
+    - Beispiele:
+        - Fehlerbehandlung: (z. B. Validierungsfehler, Datenbankfehler, Netzwerkfehler)
+        - Verarbeitung von Benutzeranfragen (Web-Requests) durch Filter oder Middleware-Komponenten
+        - Verarbeitung von Bestellungen in einem E-Commerce-System durch eine Reihe von Prozessen oder Regeln
+        - E-Mail-Spamschutz durch verschiedene Filterstationen
+        - Verarbeitung von Zahlungsabwicklungen
+        - Benutzerauthentifizierung und -berechtigung
+        - Support-Ticketsystem
+        - Dokumentenverarbeitung
+        - Datenvalidierung
+
 - todo
 
-1. Chain of responsibility
 2. Command
 3. Interpreter
 4. Iterator
