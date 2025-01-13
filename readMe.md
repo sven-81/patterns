@@ -370,35 +370,35 @@
 
 2. Command
     - Ziel:
-      - Kapselung von Anfragen als Objekte
-      - Ermöglicht die Undo/Redo-Operationen
-      - Ermöglicht eine einfache Verlängerung der Operationen
-      - Entkopplung von Sender und Empfänger
-      - Batch-Verarbeitung und Aufruf von mehreren Befehlen
-      - Parameterisierung von Objekten mit Befehlen
-      - Implementierung von Triggern und Ereignissteuerung
-      - Vereinfachung der Implementierung von Transaktionen
+        - Kapselung von Anfragen als Objekte
+        - Ermöglicht die Undo/Redo-Operationen
+        - Ermöglicht eine einfache Verlängerung der Operationen
+        - Entkopplung von Sender und Empfänger
+        - Batch-Verarbeitung und Aufruf von mehreren Befehlen
+        - Parametrisierung von Objekten mit Befehlen
+        - Implementierung von Triggern und Ereignissteuerung
+        - Vereinfachung der Implementierung von Transaktionen
     - Beispiele:
-      - Undo/Redo-Funktionalität: Apps wie Texteditoren oder Grafikbearbeitungsprogramme
-      - Automatisierung von Aufgaben durch Makro- und Batch-Verarbeitung
-      - Benutzeroberfläche (UI) und Geschäftslogik
-      - Datenbank-Transaktionen
-      - Event-Trigger-Systeme wie Zahlungsabwicklung, Bestandsprüfung, Versandanforderung
-      - Zeitgesteuerte Aufgaben oder wiederkehrende Aufgaben, Cron-Jobs
-      - Webanwendungen mit komplexen Formularen und Aktionen
-      - Bewegungssteuerung und Spielaktionen
-      - Webhooks und Benachrichtigungen
-      - Microservices-Kommunikation und -Interaktionen über Messaging-Systeme (z. B. Kafka, RabbitMQ)
+        - Undo/Redo-Funktionalität: Apps wie Texteditoren oder Grafikbearbeitungsprogramme
+        - Automatisierung von Aufgaben durch Makro- und Batch-Verarbeitung
+        - Benutzeroberfläche (UI) und Geschäftslogik
+        - Datenbank-Transaktionen
+        - Event-Trigger-Systeme wie Zahlungsabwicklung, Bestandsprüfung, Versandanforderung
+        - Zeitgesteuerte Aufgaben oder wiederkehrende Aufgaben, Cron-Jobs
+        - Webanwendungen mit komplexen Formularen und Aktionen
+        - Bewegungssteuerung und Spielaktionen
+        - Webhooks und Benachrichtigungen
+        - Microservices-Kommunikation und -Interaktionen über Messaging-Systeme (z. B. Kafka, RabbitMQ)
 
 3. Interpreter
-      - Ziel:
+    - Ziel:
         - Verarbeitung von Ausdrücken einer formalen Sprache
         - Erweiterbarkeit der Sprache durch Grammatik oder Regeln
         - Wiederverwendbarkeit und Modularität
         - Ermöglichung der Verarbeitung komplexer Ausdrücke
         - Erleichterung des Parsing- und Evaluierungsprozesses
         - Vermeidung der Wiederholung von Code
-      - Beispiele:
+    - Beispiele:
         - Mathematische Ausdrücke evaluieren z.B. Taschenrechner
         - Domänenspezifische Sprachen (DSLs) z.B. Regeln für die Preisberechnung, Rabatte oder Steuerberechnungen
         - Abfragen und Filter für Datenbankabfragen
@@ -413,16 +413,43 @@
         - Simulationssoftware, für mathematische Modelle und Gleichungen
         - Spielesysteme (z.B. Regeln für Karten- oder Brettspiele)
 
-- todo
 4. Iterator
     - Ziel:
+        - Trennung der Sammlung und der Iteration
+        - Vereinfachung der Iteration über die Elemente einer Sammlung
+        - Zugriff auf Elemente ohne Kenntnis der internen Struktur
+        - Unterstützung verschiedener Iterationstypen
+        - Konsistenter und sicherer Zugriff auf Elemente
+        - Vermeidung der direkten Manipulation von Indizes
+        - Mehrfachiterationen gleichzeitig ermöglichen
+        - Erweiterbarkeit und Flexibilität bei Iterationsstrategien
+        - Unterstützung für verschiedene Datentypen und komplexe Strukturen
     - Beispiele:
+      - Durchlaufen von Collections (Listen, Arrays, Sets)
+      - Arbeiten mit verschiedenen Datenstrukturen wie Arrays, Bäume, Graphen und Sets
+      - Datenbankabfragen und Ergebnismengen
+      - Verarbeitung von Dokumenten oder XML-Strukturen
+      - Verarbeitung von Benutzeroberflächen-Elementen
+      - Wiederholte Verarbeitung von Items in einem Warenkorb (E-Commerce)
+      - Ereignisverarbeitung in Event-Handling-Systemen
+      - Verarbeitung von Benutzereingaben oder Formulardaten
+      - Verarbeiten von Grafiken oder Pixel-Daten (Bildbearbeitung)
+      - Spiel-Entwicklung (z. B. Spielfiguren und Objekte)
+      - Verarbeitung von Multi-Threading oder Parallelverarbeitung
+      - Durchlaufen von Log-Daten und Überwachungsereignissen
+      - Verarbeitung von Dateisystemen
+      - Verarbeitung von Zeitreihen oder historischen Daten
+
+- todo
 
 5. Mediator
     - Ziel:
     - Beispiele:
 
 6. Memento
+    - Ziel:
+    - Beispiele:
+
 7. Null Object
 8. Observer
 9. Specification
