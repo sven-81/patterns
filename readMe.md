@@ -389,16 +389,39 @@
       - Bewegungssteuerung und Spielaktionen
       - Webhooks und Benachrichtigungen
       - Microservices-Kommunikation und -Interaktionen über Messaging-Systeme (z. B. Kafka, RabbitMQ)
-      
-
-- todo
 
 3. Interpreter
+      - Ziel:
+        - Verarbeitung von Ausdrücken einer formalen Sprache
+        - Erweiterbarkeit der Sprache durch Grammatik oder Regeln
+        - Wiederverwendbarkeit und Modularität
+        - Ermöglichung der Verarbeitung komplexer Ausdrücke
+        - Erleichterung des Parsing- und Evaluierungsprozesses
+        - Vermeidung der Wiederholung von Code
+      - Beispiele:
+        - Mathematische Ausdrücke evaluieren z.B. Taschenrechner
+        - Domänenspezifische Sprachen (DSLs) z.B. Regeln für die Preisberechnung, Rabatte oder Steuerberechnungen
+        - Abfragen und Filter für Datenbankabfragen
+        - Konfiguration von Systemen oder Software z.B. *.ini oder *.yaml-Dateien
+        - Logische Ausdrücke und Entscheidungsbäume
+        - Parsen und Validieren von Texten basierend auf regulären Ausdrücken
+        - Programmiersprachen oder Skriptsprachen
+        - Interpretieren von Geschäftsregeln oder Workflows in einer benutzerdefinierten Sprache
+        - Text- und Sprachverarbeitung
+        - Interpretieren von Zeitplänen in einer benutzerdefinierten Sprache
+        - Automatisierung von Tests oder Skripten
+        - Simulationssoftware, für mathematische Modelle und Gleichungen
+        - Spielesysteme (z.B. Regeln für Karten- oder Brettspiele)
+
+- todo
+4. Iterator
     - Ziel:
     - Beispiele:
 
-4. Iterator
 5. Mediator
+    - Ziel:
+    - Beispiele:
+
 6. Memento
 7. Null Object
 8. Observer
