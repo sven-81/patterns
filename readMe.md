@@ -466,11 +466,30 @@
         - Verteilte Systeme und Microservices durch Nachrichtenbroker oder Event-Bus
         - Benachrichtigungs- und Beobachtungssysteme
 
-- todo
 
 6. Memento
     - Ziel:
+        - Speichern des Zustands eines Objekts und Wiederherstellung des Zustands des Objekts/Ermöglichung von "Undo"-
+          und "Redo"-Funktionen
+        - Verbergen der internen Struktur des Objekts
+        - Zustandsverwaltung für komplexe Objekte
+        - Verhindern von direkter Manipulation des Zustands
     - Beispiele:
+        - Texteditoren (Undo/Redo-Funktionalität)
+        - Grafische Design-Tools (Zustandsverlauf)
+        - Spielzustände (Speichern und Laden von Spielständen)
+        - Formulare und Benutzerinteraktionen (Formulardaten speichern)
+        - Workflow-Management-Systeme (Verlauf von Aufgaben oder Prozessen)
+        - Datenbankmigrationen (Rollback-Mechanismen)
+        - E-Commerce-Systeme (Bestell- und Checkout-Prozess)
+        - Simulationen (Speichern von Simulationsergebnissen)
+        - Finanz- und Budgetverwaltung (Speichern von Finanzberichten)
+        - Versionskontrolle in Softwareprojekten
+        - Wartung von Maschinen und Geräten (Zustand von Geräten speichern)
+        - Mehrstufige Berechnungen oder Datenverarbeitung (Zwischenstände speichern)
+
+
+- todo
 
 7. Null Object
     - Ziel:
