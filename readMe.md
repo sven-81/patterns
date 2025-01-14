@@ -511,12 +511,30 @@
         - Fehlerbehandlung ohne Ausnahmen
 
 
-
-- todo
 8. Observer
     - Ziel:
+        - Entkopplung von Subjekt und Beobachtern (lose Kopplung)
+        - Benachrichtigung bei Zustandsänderung
+        - Vermeidung redundanter Code-Duplikationen
+        - Erweiterbarkeit
+        - Asynchrone Benachrichtigungen
+        - Mehrere Abonnenten auf dasselbe Ereignis
     - Beispiele:
+        - Benachrichtigungs- und Event-Handling-Systeme (UI-Elemente ändern Darstellung oder Logik, wenn ein
+          Ereignis eintritt)
+        - Model-View-Controller (MVC) Architektur
+        - Benachrichtigungssysteme (Notification Systems)
+        - Logging und Auditing
+        - Echtzeit-Datenstreams und Dashboard-Anwendungen
+        - E-Commerce- und Bestellsysteme
+        - Spielentwicklung (Erreichen eines neuen Levels oder das Sammeln eines Items)
+        - Distributed Systems und Microservices
+        - Automatisierung und Workflows
+        - Reaktive Programmierung (Reactive Programming) (wie React oder Vue.js)
+        - Zeitgesteuerte Benachrichtigungen (Countdown-Timer)
 
+
+- todo
 9. Specification
     - Ziel:
     - Beispiele:

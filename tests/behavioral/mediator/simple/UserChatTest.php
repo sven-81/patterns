@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 #[CoversClass(User::class)]
 #[CoversClass(ChatMediator::class)]
-class UserTest extends TestCase
+class UserChatTest extends TestCase
 {
     public function testCanUseChat(): void
     {
