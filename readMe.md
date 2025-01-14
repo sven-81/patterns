@@ -425,41 +425,84 @@
         - Erweiterbarkeit und Flexibilität bei Iterationsstrategien
         - Unterstützung für verschiedene Datentypen und komplexe Strukturen
     - Beispiele:
-      - Durchlaufen von Collections (Listen, Arrays, Sets)
-      - Arbeiten mit verschiedenen Datenstrukturen wie Arrays, Bäume, Graphen und Sets
-      - Datenbankabfragen und Ergebnismengen
-      - Verarbeitung von Dokumenten oder XML-Strukturen
-      - Verarbeitung von Benutzeroberflächen-Elementen
-      - Wiederholte Verarbeitung von Items in einem Warenkorb (E-Commerce)
-      - Ereignisverarbeitung in Event-Handling-Systemen
-      - Verarbeitung von Benutzereingaben oder Formulardaten
-      - Verarbeiten von Grafiken oder Pixel-Daten (Bildbearbeitung)
-      - Spiel-Entwicklung (z. B. Spielfiguren und Objekte)
-      - Verarbeitung von Multi-Threading oder Parallelverarbeitung
-      - Durchlaufen von Log-Daten und Überwachungsereignissen
-      - Verarbeitung von Dateisystemen
-      - Verarbeitung von Zeitreihen oder historischen Daten
+        - Durchlaufen von Collections (Listen, Arrays, Sets)
+        - Arbeiten mit verschiedenen Datenstrukturen wie Arrays, Bäume, Graphen und Sets
+        - Datenbankabfragen und Ergebnismengen
+        - Verarbeitung von Dokumenten oder XML-Strukturen
+        - Verarbeitung von Benutzeroberflächen-Elementen
+        - Wiederholte Verarbeitung von Items in einem Warenkorb (E-Commerce)
+        - Ereignisverarbeitung in Event-Handling-Systemen
+        - Verarbeitung von Benutzereingaben oder Formulardaten
+        - Verarbeiten von Grafiken oder Pixel-Daten (Bildbearbeitung)
+        - Spiel-Entwicklung (z. B. Spielfiguren und Objekte)
+        - Verarbeitung von Multi-Threading oder Parallelverarbeitung
+        - Durchlaufen von Log-Daten und Überwachungsereignissen
+        - Verarbeitung von Dateisystemen
+        - Verarbeitung von Zeitreihen oder historischen Daten
 
-- todo
 
 5. Mediator
     - Ziel:
+        - Reduzierung der direkten Kommunikation durch Entkopplung der Komponenten mittels Zentralisierung der
+          Kommunikation
+        - Vereinfachung der Interaktion zwischen Objekten
+        - Förderung einer klaren Trennung der Verantwortlichkeiten
+        - Erleichterung von Änderungen und Erweiterungen
+        - Vermeidung von komplexen Netzwerken von Abhängigkeiten
+        - Reduzierung von Vererbungshierarchien
     - Beispiele:
+        - Formular- oder UI-Komponenten-Interaktion (Benutzeroberfläche) (z.B. "Absenden"-Button wird nur aktiviert,
+          wenn alle erforderlichen Felder ausgefüllt sind)
+        - Chat- und Kommunikationssysteme (Mediator empfängt Nachrichten von einem Teilnehmer und verteilt sie an alle
+          relevanten Empfänger)
+        - Komplexe Event- oder Nachrichtenverarbeitung
+        - Spiele (insbesondere bei der Interaktion von Spielobjekten)
+        - Workflow-Management-Systeme (Mediator verwaltet die Abfolge der Aufgaben und stellt sicher, dass die richtigen
+          Aktionen zur richtigen Zeit ausgeführt werden, ohne dass die einzelnen Aufgaben direkt miteinander
+          kommunizieren müssen)
+        - Verkehrs- oder Fahrplanmanagement
+        - E-Commerce-Systeme (z. B. Bestell- und Zahlungsabwicklung)
+        - Automatisierte Fertigungssteuerung
+        - Verteilte Systeme und Microservices durch Nachrichtenbroker oder Event-Bus
+        - Benachrichtigungs- und Beobachtungssysteme
+
+- todo
 
 6. Memento
     - Ziel:
     - Beispiele:
 
 7. Null Object
+    - Ziel:
+    - Beispiele:
+
 8. Observer
+    - Ziel:
+    - Beispiele:
+
 9. Specification
+    - Ziel:
+    - Beispiele:
+
 10. State
+    - Ziel:
+    - Beispiele:
+
 11. Strategy
+    - Ziel:
+    - Beispiele:
+
 12. Template method
+    - Ziel:
+    - Beispiele:
+
 13. Visitor
-    ? Asynchronous Method Invocation
-    ? Event Sourcing
-    ? Resilience
+    - Ziel:
+    - Beispiele:
+
+? Asynchronous Method Invocation
+? Event Sourcing
+? Resilience
 
 ---
 
