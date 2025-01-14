@@ -489,12 +489,30 @@
         - Mehrstufige Berechnungen oder Datenverarbeitung (Zwischenstände speichern)
 
 
-- todo
-
 7. Null Object
     - Ziel:
+        - Reduzierung von expliziten null-Prüfungen im Code
+        - Vereinfachung der Logik
+        - Erhöhung der Konsistenz und Stabilität des Systems
+        - Förderung von Polymorphismus und Vermeidung von bedingtem Code
+        - Entkopplung von Komponenten
+        - Vermeidung von Fehlern durch null-Verweise
+        - Reduzierung von Ausnahmen
     - Beispiele:
+        - Logging-Systeme, das nicht in allen Fällen genutzt werden muss (z.B. in einer Produktionsumgebung oder in
+          bestimmten Situationen)
+        - optionaler externer Service oder Datenbankverbindung
+        - Benutzerauthentifizierung und -autorisierung
+        - Verarbeitung von optionalen Daten
+        - Automatische Standardwerte für Formulare und Benutzereingaben
+        - Zustandsmuster und Finite State Machines (FSMs)
+        - Verwalten von nicht vorhandenen Ressourcen
+        - Dynamische Anpassung von Schnittstellen
+        - Fehlerbehandlung ohne Ausnahmen
 
+
+
+- todo
 8. Observer
     - Ziel:
     - Beispiele:
