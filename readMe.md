@@ -534,11 +534,29 @@
         - Zeitgesteuerte Benachrichtigungen (Countdown-Timer)
 
 
-- todo
-
 9. Specification
     - Ziel:
+        - Trennung von Geschäftslogik und Geschäftsregeln
+        - Wiederverwendbarkeit von Spezifikationen
+        - Kombinierbarkeit von Spezifikationen durch logische Operatoren wie "AND", "OR" und "NOT"
+        - Erhöhte Lesbarkeit und Klarheit
+        - Erweiterbarkeit und Flexibilität
+        - Testbarkeit von Geschäftsregeln
+        - Vereinfachung von komplexen Bedingungen
+        - Vermeidung von Code-Duplikation
+        - Trennung von Anfrage und Implementierung
+        - Anpassung der Geschäftslogik zur Laufzeit
     - Beispiele:
+        - Filtern von Daten bei z.B. Datenbankabfragen
+        - Validierung von Objekten (z. B. Passwortlänge, Passwortkomplexität, E-Mail-Format)
+        - Kombinieren von Geschäftsregeln
+        - Such- und Filterlogik für Benutzeroberflächen
+        - Regelbasierte Entscheidungssysteme
+        - Dynamisches Generieren von Suchabfragen
+        - Verwalten von Regeln in einem komplexen System
+        - Berechnung von Berechtigungen und Zugriffskontrolle
+        - Produkt- oder Serviceangebote
+
 
 10. State
     - Ziel:
@@ -557,6 +575,9 @@
         - Spiele und interaktive Anwendungen
         - Benutzersitzungen und Authentifizierung
         - Simulationen
+
+
+- todo
 
 11. Strategy
     - Ziel:
