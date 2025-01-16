@@ -535,13 +535,28 @@
 
 
 - todo
+
 9. Specification
     - Ziel:
     - Beispiele:
 
 10. State
     - Ziel:
+        - Kapselung der Zustandslogik in separate State-Klassen
+        - Vermeidung von Zustandsbedingungen (Häufige if- oder switch-Abfragen im Code)
+        - Erweiterbarkeit
+        - Zustandsübergänge vereinfachen
     - Beispiele:
+        - Workflow- oder Prozessmanagement
+        - Finite State Machines (FSM/Steuerung von Maschinen oder Geräten)
+        - Benutzeroberflächen (UI)
+        - Zahlungssysteme
+        - Datenbanktransaktionen
+        - Sprachverarbeitung und Textanalyse
+        - Zustandsbasierte Steuerung von Geräten (Smart-Home-System)
+        - Spiele und interaktive Anwendungen
+        - Benutzersitzungen und Authentifizierung
+        - Simulationen
 
 11. Strategy
     - Ziel:
