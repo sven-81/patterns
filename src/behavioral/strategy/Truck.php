@@ -2,19 +2,20 @@
 
 declare(strict_types=1);
 
-namespace patterns\todoStrategic;
+namespace patterns\behavioral\strategy;
 
-class Truck implements Transport
+
+class Truck implements TransportStrategy
 {
-    public function deliver(Present $mail): void
+    public function deliver(Mail $mail): void
     {
         echo 'I am a truck and I delivered: ' . PHP_EOL;
         echo $mail->about();
-        echo $mail->addRecipientsAge();
+        echo $mail->getWeight();
     }
 
 
-    public function returnToSender(Present $mail): void
+    public function returnToSender(Mail $mail): void
     {
         echo 'returned to Sender, cannot handle Mail type: ' . get_class($mail) . PHP_EOL;
     }

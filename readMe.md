@@ -577,12 +577,29 @@
         - Simulationen
 
 
-- todo
-
 11. Strategy
-    - Ziel:
-    - Beispiele:
+      - Ziel:
+        - Trennung von Algorithmen
+        - Ermöglicht die dynamische Auswahl von Algorithmen zur Laufzeit
+        - Vermeidung von großen if-else-Ketten oder Switch-Statements
+        - Erhöht die Flexibilität und Erweiterbarkeit
+        - Förderung des offenen/geschlossenen Prinzips (Open/Closed Principle)
+        - Erleichtert das Testen von Algorithmen
+        - Reduziert die Kopplung zwischen der Verwendung des Algorithmus und der Implementierung
+      - Beispiele:
+        - Zahlungsabwicklung (E-Commerce)
+        - Sortieralgorithmen (Datenverarbeitung)
+        - Kompression von Dateien (Dateiverwaltung)
+        - Datenbankabfragen (Datenzugriffsschicht)
+        - Verkehrssteuerung (Autonomes Fahren)
+        - Navigationssysteme (Routing-Algorithmen)
+        - Zinsberechnung (Finanzanwendungen)
+        - Verhalten von Tieren in einem Spiel (KI in Spielen)
+        - Optimierung von Lieferketten (Logistik)
+        - Benutzerauthentifizierung (Sicherheitsanwendungen)
 
+
+- todo
 12. Template method
     - Ziel:
     - Beispiele:

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace patterns\todoStrategic;
+namespace patterns\behavioral\strategy;
 
 interface Mail
 {
