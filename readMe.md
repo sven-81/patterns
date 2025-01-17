@@ -578,7 +578,7 @@
 
 
 11. Strategy
-      - Ziel:
+    - Ziel:
         - Trennung von Algorithmen
         - Ermöglicht die dynamische Auswahl von Algorithmen zur Laufzeit
         - Vermeidung von großen if-else-Ketten oder Switch-Statements
@@ -586,7 +586,7 @@
         - Förderung des offenen/geschlossenen Prinzips (Open/Closed Principle)
         - Erleichtert das Testen von Algorithmen
         - Reduziert die Kopplung zwischen der Verwendung des Algorithmus und der Implementierung
-      - Beispiele:
+    - Beispiele:
         - Zahlungsabwicklung (E-Commerce)
         - Sortieralgorithmen (Datenverarbeitung)
         - Kompression von Dateien (Dateiverwaltung)
@@ -600,9 +600,29 @@
 
 
 - todo
+
 12. Template method
     - Ziel:
+        - Wiederverwendbarkeit erhöhen durch Verschieben gemeinsamer Teile eines Algorithmus in eine Basisklasse
+        - Kohäsion und Lesbarkeit steigern
+        - Vermeidung von Code-Duplikation
+        - Ermöglichung von Erweiterbarkeit
+        - Flexibilität durch Überschreiben
+        - Standardisierung von Abläufen
+        - Basisklasse steuert die Struktur des gesamten Algorithmus, während die Unterklassen nur die Details bestimmter
+          Schritte anpassen, was die Kontrolle über den Ablauf des Algorithmus verbessert
     - Beispiele:
+        - Datenverarbeitung aus verschiedenen Quellen (z.B. Datenbank, API, Datei)
+        - Benutzer-Authentifizierung und Autorisierung
+        - Druck- oder Exportvorgänge
+        - E-Commerce und Bestellabwicklung
+        - Spiel- und Simulationserstellung
+        - Datenbankoperationen (CRUD-Prozesse)
+        - Wartungs- oder Systemprozesse
+        - Workflow-Management
+
+
+- todo
 
 13. Visitor
     - Ziel:
