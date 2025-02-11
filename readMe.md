@@ -598,9 +598,7 @@
         - Optimierung von Lieferketten (Logistik)
         - Benutzerauthentifizierung (Sicherheitsanwendungen)
 
-
-- todo
-
+    
 12. Template method
     - Ziel:
         - Wiederverwendbarkeit erhöhen durch Verschieben gemeinsamer Teile eines Algorithmus in eine Basisklasse
