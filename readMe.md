@@ -643,8 +643,29 @@
           Steuerberechnungen)
 
 
+14. Asynchronous Method Invocation
+    Das **Asynchronous Method Invocation (AMI)** Pattern hat das Ziel, die Kommunikation zwischen verschiedenen
+    Komponenten oder Systemen zu entkoppeln und die Effizienz zu steigern, indem Methoden asynchron aufgerufen werden.
+    Anstatt dass ein Prozess oder eine Methode darauf wartet, dass eine andere Methode ihre Arbeit abgeschlossen hat (
+    was oft zu Blockierungen führt), ermöglicht das AMI-Pattern, dass der Aufrufer weiterarbeitet, ohne auf die
+    Fertigstellung der Methode zu warten.
+    - Ziel:
+        - Vermeidung von Blockierung/Reduzierung von Wartezeiten
+        - Verbesserung der Performance und Skalierbarkeit/Optimierung von Ressourcen
+        - Steigerung der Benutzererfahrung in Web- oder Desktop-Anwendungen
+        - Fehlerbehandlung und Wiederherstellung
+        - Entkopplung der Komponenten**:
+    - Beispiele:
+        - Webanwendungen: Asynchrone HTTP-Anfragen (wie AJAX) verbessern die Benutzererfahrung, indem sie die Ladezeiten
+          verringern.
+        - Verteilte Systeme: In Microservices-Architekturen oder bei Service-orientierter Architektur (SOA) wird oft AMI
+          genutzt, um entfernte Dienste asynchron anzusprechen.
+        - Datenbankabfragen
+        - In Event-Driven-Architekturen oder bei Messaging-Systemen kann AMI genutzt werden, um
+          Nachrichten asynchron zu senden und zu empfangen.
+
+
 - todo
-  ? Asynchronous Method Invocation
   ? Event Sourcing
   ? Resilience
 
@@ -655,7 +676,10 @@
 - todo
 
 1. Service Locator
+   https://designpatternsphp.readthedocs.io/de/latest/More/ServiceLocator/README.html
 2. Repository
+   https://designpatternsphp.readthedocs.io/de/latest/More/Repository/README.html
 3. Entitäts-Attribut-Wert (EAV)
-   ? CQRS (Command Query Responsibility Segregation)
-   ? Lazy Initialization
+   https://designpatternsphp.readthedocs.io/de/latest/More/EAV/README.html
+? CQRS (Command Query Responsibility Segregation)
+? Lazy Initialization

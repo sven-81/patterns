@@ -7,6 +7,10 @@
       "url": "https://github.com/flyeralarm/php-code-validator"
     }
   },
+  "require": {
+    "ext-pdo": "*",
+    "react/http": "*"
+  },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
     "phpunit/phpunit": "*"
@@ -24,8 +28,5 @@
         "tests/"
       ]
     }
-  },
-  "require": {
-    "ext-pdo": "*"
   }
 }
