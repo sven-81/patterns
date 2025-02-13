@@ -598,7 +598,7 @@
         - Optimierung von Lieferketten (Logistik)
         - Benutzerauthentifizierung (Sicherheitsanwendungen)
 
-    
+
 12. Template method
     - Ziel:
         - Wiederverwendbarkeit erhöhen durch Verschieben gemeinsamer Teile eines Algorithmus in eine Basisklasse
@@ -620,15 +620,33 @@
         - Workflow-Management
 
 
-- todo
-
 13. Visitor
     - Ziel:
+        - Trennung von Zuständigkeiten durch Trennung der Struktur der Objekte und den Operationen, die auf diesen
+          Objekten durchgeführt werden
+        - Erweiterbarkeit, indem im Visitor Pattern neue Operationen auf einer Objektstruktur hinzugefügt         
+          werden können, ohne die existierenden Klassen zu verändern
+        - Vermeidung von Bedingungslogik im Objekt
+        - Verkapselung von Operationen
+        - Unterstützung komplexer Objektstrukturen
     - Beispiele:
+        - Datenstruktur- und Baumoperationen
+        - Berechnungen und Auswertungen
+        - Serialisierung wie JSON oder XML und Deserialisierung
+        - Datenbankoperationen und Persistenz
+        - Komplexe Rendering- oder Layout-Operationen in einer Benutzeroberfläche oder das Erzeugen von
+          unterschiedlichen Ausgabeformaten für ein Dokument (z. B. PDF, HTML, CSV)
+        - Validierung und Prüfungen
+        - Komplexe Transformationen (z. B. Übersetzung, Skalierung oder Modifikation)
+        - Protokollierung und Debugging
+        - Komplexe Geschäftslogik durch Vielzahl von Objekten (z. B. bei der Berechnung von Preisen, Rabatten oder
+          Steuerberechnungen)
 
-? Asynchronous Method Invocation
-? Event Sourcing
-? Resilience
+
+- todo
+  ? Asynchronous Method Invocation
+  ? Event Sourcing
+  ? Resilience
 
 ---
 
