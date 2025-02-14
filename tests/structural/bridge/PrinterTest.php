@@ -11,6 +11,7 @@ use PHPUnit\Framework\TestCase;
 #[CoversClass(LaserPrinter::class)]
 #[CoversClass(CmykLayout::class)]
 #[CoversClass(SpotColorLayout::class)]
+#[CoversClass(Printer::class)]
 class PrinterTest extends TestCase
 {
     public function testCanPrint(): void

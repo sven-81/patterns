@@ -10,6 +10,7 @@ use PHPUnit\Framework\TestCase;
 #[CoversClass(Application::class)]
 #[CoversClass(Config::class)]
 #[CoversClass(Logger::class)]
+#[CoversClass(Singleton::class)]
 class ApplicationTest extends TestCase
 {
     private string $filePath;

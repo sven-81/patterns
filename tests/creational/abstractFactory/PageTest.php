@@ -28,6 +28,7 @@ use PHPUnit\Framework\TestCase;
 #[CoversClass(OnlineRenderer::class)]
 #[CoversClass(OnlineTemplateFactory::class)]
 #[CoversClass(OnlineTitleTemplate::class)]
+#[CoversClass(BasePageTemplate::class)]
 class PageTest extends TestCase
 {
     public function testCanRenderOnlinePage(): void

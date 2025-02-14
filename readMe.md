@@ -665,8 +665,34 @@
           Nachrichten asynchron zu senden und zu empfangen.
 
 
+15. Event Sourcing
+    Im Kontext von Event Sourcing werden alle Änderungen (Events) in einer Event-Datenbank oder Event-Store
+    aufgezeichnet. Anstatt den aktuellen Zustand einer Entität zu speichern, wird jeder Event, der den Zustand verändert
+    hat, in einer chronologischen Reihenfolge gespeichert. Wenn der aktuelle Zustand einer Entität benötigt wird, kann
+    er durch das Abspielen der Events, die diese Entität betreffen, rekonstituiert werden.
+    - Ziel:
+        - Vollständige Historie und Nachvollziehbarkeit von Ereignissen
+        - Flexibilität bei der Rekonstruktion des Systemzustands
+        - Fehlertoleranz und Konsistenz durch Speicherung der unmodifizierten Reihenfolge der Events
+        - Skalierbarkeit durch Eventual Consistency-Architektur
+        - Unabhängigkeit von Datenmodellen
+        - Erhöhte Fehlerbehandlungsmöglichkeiten
+        - Einfache Integration von Event-Driven Systemen
+    - Beispiele:
+        - Finanz- und Zahlungsabwicklungssysteme
+        - Bestellablauf auf E-Commerce-Plattformen
+        - Content Management Systeme (CMS): alle Änderungen an Inhalten (z.B. das Erstellen, Bearbeiten oder Löschen von
+          Artikeln)
+        - Ereignisgesteuerte Microservices
+        - Echtzeit-Bestandsmanagement
+        - User Activity Tracking und Analytics
+        - Stateful Services und Workflows in komplexen Geschäftsprozessen
+        - IoT und Sensoren
+        - Audit- und Compliance-Systeme
+        - Gaming- und Multiplayer-Systeme
+        - Chat- und Kommunikationssysteme
+
 - todo
-  ? Event Sourcing
   ? Resilience
 
 ---
@@ -681,5 +707,5 @@
    https://designpatternsphp.readthedocs.io/de/latest/More/Repository/README.html
 3. Entitäts-Attribut-Wert (EAV)
    https://designpatternsphp.readthedocs.io/de/latest/More/EAV/README.html
-? CQRS (Command Query Responsibility Segregation)
-? Lazy Initialization
+   ? CQRS (Command Query Responsibility Segregation)
+   ? Lazy Initialization

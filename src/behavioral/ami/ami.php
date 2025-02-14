@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace patterns\structural\ami;
+namespace patterns\behavioral\ami;
 
 use React\EventLoop\Loop;
 use React\Http\Browser;

@@ -12,6 +12,7 @@ use PHPUnit\Framework\TestCase;
 #[CoversClass(Hotline::class)]
 #[CoversClass(System::class)]
 #[CoversClass(TechnicalSupport::class)]
+#[CoversClass(CustomerContactFlow::class)]
 class AppTest extends TestCase
 {
     public function testCanRunSuccessfullyOrderRequest(): void

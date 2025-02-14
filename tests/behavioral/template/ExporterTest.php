@@ -9,6 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 #[CoversClass(CsvDataExporter::class)]
 #[CoversClass(JsonDataExporter::class)]
+#[CoversClass(DataExporter::class)]
 class ExporterTest extends TestCase
 {
     private array $data;
