@@ -345,7 +345,41 @@
     - Anti-Pattern wie hier beschrieben:
       https://designpatternsphp.readthedocs.io/de/latest/Structural/Registry/README.html
 
-? Composite Method (Variante des Composite)
+13. Service Locator
+    - Ziele:
+        - Zentralisierung der Dienstinstanzierung: stellt eine zentrale Anlaufstelle zur Verfügung, um Instanzen von
+          Objekten zu finden und bereitzustellen. Dies reduziert die Notwendigkeit, dass jedes einzelne Modul oder
+          Objekt für seine Abhängigkeiten verantwortlich ist.
+        - Reduzierung der Kopplung durch direkten Zugriff auf die Dienste durch die Bereitstellung einer zentralen
+          Anlaufstelle. Objekte müssen nicht mehr explizit wissen, wie sie ihre Abhängigkeiten instanziieren.
+        - Erleichterung von Tests
+        - Flexibilität bei der Implementierung von Diensten durch lose Kopplung
+        - Vermeidung von mehrfacher Instanziierung
+        - Vereinfachung der Konfiguration und Verwaltung von Abhängigkeiten
+    - Beispiele:
+        - Enterprise Applications: Eine Anwendung mit einer komplexen Geschäftslogik könnte einen Service Locator
+          verwenden, um Datenbankverbindungen, Caching-Mechanismen und Logging-Dienste zentral zu verwalten und in
+          verschiedenen Teilen der Anwendung darauf zuzugreifen.
+        - Webanwendungen und Frameworks um Controller, Views, Middleware oder Datenbankverbindungen zu instanziieren und
+          bei Bedarf bereitzustellen.
+        - Microservices-Architekturen: Ein Service Locator könnte für die Verwaltung von API-Clients und
+          Authentifizierungsdiensten innerhalb einer Microservices-Architektur verwendet werden, um die Kommunikation
+          zwischen den Diensten zu vereinfachen.
+        - Desktop-Anwendung, die eine umfangreiche Logik zur Dateiverarbeitung, Netzwerkkommunikation und
+          Benutzeroberflächensteuerung enthält, könnte einen Service Locator nutzen, um all diese verschiedenen Services
+          zu verwalten und bei Bedarf bereitzustellen.
+        - Plugin-Architekturen: In einem Software-Tool, das eine Plugin-Architektur unterstützt (z. B. ein Texteditor
+          mit Erweiterungen), könnte der Service Locator verwendet werden, um verschiedene Plugins zu laden und deren
+          Dienste bereitzustellen.
+        - Verwaltung von Singleton-Instanzen: Ein Logging-Service, der in der gesamten Anwendung nur einmal instanziiert
+          werden soll, kann über den Service Locator verwaltet werden, sodass alle Komponenten auf dieselbe Instanz
+          zugreifen.
+        - Integration von Drittanbieter-Bibliotheken: Eine Anwendung, die auf eine externe Zahlungs-Gateway-Bibliothek
+          zugreift, könnte den Service Locator nutzen, um die Instanz der Bibliothek zu verwalten und die Abhängigkeit
+          in der gesamten Anwendung verfügbar zu machen.
+        - Testumgebungen und Mocking: In der Testumgebung wird der Service Locator oft verwendet, um Dienste dynamisch
+          zu mocken oder zu ersetzen, sodass die Anwendung getestet werden kann, ohne auf echte Implementierungen
+          angewiesen zu sein.
 
 ---
 
@@ -692,12 +726,58 @@
         - Gaming- und Multiplayer-Systeme
         - Chat- und Kommunikationssysteme
 
-- todo
-  ? Resilience
+
+15. Resilience
+    dient dazu, die Stabilität und Zuverlässigkeit einer Anwendung zu erhöhen, insbesondere im Hinblick auf die
+    Interaktion mit externen Diensten und Ressourcen. Ein System soll trotz unerwarteter Störungen oder Fehlfunktionen
+    weiterhin funktioniert oder zumindest in einer
+    kontrollierten Weise ausfällt, anstatt komplett zu versagen.
+    - Ziele:
+        - Fehlertoleranz, so dass das Programm bei Fehlern in externen Systemen (Datenbanken, APIs oder Services...)
+          durch Strategien wie Retry, Circuit Breaker und Fallback weiterhin funktioniert, ohne komplett auszufallen.
+        - Vermeidung von Kettenfehlern: Der Einsatz eines Circuit Breakers verhindert, dass
+          wiederholt erfolglose Anfragen an einen instabilen Service gesendet werden, was die Wahrscheinlichkeit von
+          Kettenfehlern verringert.
+        - Skalierbarkeit und Performance: Resilience Patterns helfen, die Leistung auch bei hoher Last
+          aufrechtzuerhalten, indem sie Techniken wie Rate Limiting oder Caching einsetzen, um die Belastung von
+          externen Ressourcen zu verringern und so Überlastungen zu vermeiden.
+        - Zuverlässigkeit und Verfügbarkeit: Das Ziel ist, die Anwendung auch bei temporären Ausfällen von externen
+          Systemen so weit wie möglich verfügbar zu halten. Mit Hilfe von Strategien wie Timeouts und Failover wird
+          sichergestellt, dass die Anwendung auch bei kurzfristigen Problemen weiterläuft.
+        - Schnelle Fehlererkennung: Resilience Patterns verbessern die Fähigkeit der Anwendung, Fehler schnell zu
+          erkennen und zu reagieren, indem sie Monitoring und Alerting nutzen, um den Zustand externer Abhängigkeiten
+          kontinuierlich zu überwachen.
+    - Beispiele:
+        - Circuit Breaker: Ein PHP-Service, der Daten von einer externen API abruft, könnte einen **Circuit Breaker**
+          implementieren. Wenn mehrere Anfragen hintereinander fehlschlagen (z.B. durch eine nicht erreichbare API),
+          wird der Circuit Breaker aktiviert, um weitere Anfragen zu blockieren und so den externen Dienst vor einer
+          Überlastung zu schützen. (Bibliotheken wie **php-circuit-breaker**)
+        - Retry-Pattern: z.B. Aufbau einer Datenbankverbindung, könnte das **Retry-Pattern** verwenden. Wenn
+          eine Verbindung fehlschlägt, versucht das System automatisch, sich nach einer kurzen Verzögerung erneut zu
+          verbinden. (z.B. **Guzzle**)
+        - Timeout-Pattern: bei Anfrage an externe Services um sicherzustellen, dass die Anfrage nach einer bestimmten
+          Zeit abgebrochen wird, falls der Dienst nicht reagiert. (z.B. **Guzzle**)
+
+      ```php
+      $client = new \GuzzleHttp\Client(['timeout' => 2.0]); // Timeout auf 2 Sekunden setzen
+      ```
+
+        - Fallback-Pattern: Wenn ein externer Webservice nicht verfügbar ist, könnte eine PHP-Anwendung auf einen
+          lokalen Cache oder eine alternative Quelle zurückgreifen (Fallback), anstatt die Anfrage vollständig zu
+          misslingen.
+        - Bulkhead-Pattern: Wenn mehrere Microservices über APIs miteinander kommunizieren, könnte jeder Service in
+          einem isolierten Container oder Prozess laufen, sodass der Ausfall eines einzelnen Microservices nicht das
+          gesamte System beeinträchtigt. (z.B **Docker**, **Load Balancing**)
+        - Rate Limiting: Um sicherzustellen, dass ein Webservice nicht durch zu viele Anfragen überlastet wird, wird
+          die Häufigkeit von Anfragen an den Service begrenzt. (z.B. **Symfony RateLimiter** oder eigene Middleware)
+        - Caching: um wiederholte Anfragen an denselben externen Dienst zu vermeiden und so die Abhängigkeit von
+          externen Systemen zu verringern. (z.B. **Redis**, **Memcached**)
 
 ---
 
 **Other**
+
+
 
 - todo
 
