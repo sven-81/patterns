@@ -381,6 +381,49 @@
           zu mocken oder zu ersetzen, sodass die Anwendung getestet werden kann, ohne auf echte Implementierungen
           angewiesen zu sein.
 
+    14. Repository
+
+    - Ziel:
+        - Abstraktion des Datenzugriffs durch eine Abstraktionsebene für den Zugriff auf Datenquellen (z.B.
+          Datenbanken, Webservices, Dateisysteme). D.h., dass die Logik zur Interaktion mit den Datenquellen
+          vom Rest der Anwendung entkoppelt wird. Die Anwendung kommuniziert nur mit dem Repository, anstatt direkt mit
+          den Datenquellen.
+        - Zentrale Verwaltung der Datenzugriffslogik: Anstatt in der gesamten Anwendung mehrfach dieselben
+          Datenzugriffsoperationen (z.B. SQL-Abfragen) zu wiederholen, werden diese einmal im Repository definiert und
+          können überall dort wiederverwendet werden, wo sie benötigt werden.
+        - Förderung der Trennung von Anliegen (Separation of Concerns) durch Trennung Datenzugriffslogik von der
+          Geschäftslogik
+        - Erleichterung von Tests und Mocking
+        - Verbergen der Implementierungsdetails der Datenquelle
+        - Erhöhung der Flexibilität z.B. bei Wechsel der zugrunde liegenden Datenquelle
+        - Vereinfachung der komplexen Datenoperationen: Anstatt komplexe Abfragen direkt in der Anwendung zu schreiben,
+          werden diese im Repository zentralisiert, was den Code sauberer und verständlicher macht.
+        - Förderung der Konsistenz, da das Repository sicher stellt, dass alle Datenzugriffsoperationen in einer
+          konsistenten Art und Weise durchgeführt werden.
+    - Beispiele:
+        - Webanwendungen mit Datenbankzugriff, in der Daten aus einer relationalen oder NoSQL-Datenbank abgerufen
+          werden. In einer E-Commerce-Plattform könnte ein ProductRepository verwendet werden, um Produktdaten aus der
+          Datenbank abzurufen. Die Geschäftslogik würde sich nur auf das ProductRepository verlassen, anstatt direkt auf
+          die Datenbank zuzugreifen.
+        - CRUD-Operationen (Create, Read, Update, Delete) (z.B. Benutzerverwaltungssysteme, Blog-Plattformen,
+          Content-Management-Systeme)
+        - Microservices-Architektur, in der verschiedene Dienste unabhängig voneinander arbeiten, kann das Repository
+          Pattern verwendet werden, um den Datenzugriff in jedem Microservice zu abstrahieren. Dadurch wird der
+          Microservice flexibler und unabhängiger von der konkreten Datenquelle.
+        - Datenzugriff in mehrschichtigen Architekturen (Layered Architecture) (z. B. Präsentations-, Geschäfts- und
+          Datenzugriffsschicht)
+        - Verwaltung von Daten aus verschiedenen Quellen (z. B. aus einer Datenbank und einer externen API)
+        - Testbarkeit und Mocking: Dadurch können Tests durchgeführt werden, ohne dass eine tatsächliche Datenquelle
+          erforderlich ist. So kann die Anwendung von externen Abhängigkeiten entkoppelt und leicht getestet werden.
+        - Migration zwischen verschiedenen Datenquellen
+        - Caching und Performance-Optimierungen: Daten, die bereits abgerufen wurden, können im Repository
+          zwischengespeichert werden, um die Leistung zu verbessern und unnötige Datenbankabfragen zu vermeiden.
+        - Verwendung von aggregierten Datenquellen: das Repository Pattern kann dazu verwendet werden, die Aggregation
+          zu kapseln und eine vereinfachte Schnittstelle anzubieten
+        - Verwendung in Desktop-Anwendungen: In Desktop-Anwendungen, die mit lokalen Datenbanken oder Dateien arbeiten,
+          kann das Repository Pattern verwendet werden, um den Zugriff auf diese Datenquellen zu abstrahieren und den
+          Code modular und wartbar zu gestalten.
+
 ---
 
 **Behavioral**
@@ -474,7 +517,6 @@
         - Verarbeitung von Dateisystemen
         - Verarbeitung von Zeitreihen oder historischen Daten
 
-
 5. Mediator
     - Ziel:
         - Reduzierung der direkten Kommunikation durch Entkopplung der Komponenten mittels Zentralisierung der
@@ -500,7 +542,6 @@
         - Verteilte Systeme und Microservices durch Nachrichtenbroker oder Event-Bus
         - Benachrichtigungs- und Beobachtungssysteme
 
-
 6. Memento
     - Ziel:
         - Speichern des Zustands eines Objekts und Wiederherstellung des Zustands des Objekts/Ermöglichung von "Undo"-
@@ -521,7 +562,6 @@
         - Versionskontrolle in Softwareprojekten
         - Wartung von Maschinen und Geräten (Zustand von Geräten speichern)
         - Mehrstufige Berechnungen oder Datenverarbeitung (Zwischenstände speichern)
-
 
 7. Null Object
     - Ziel:
@@ -544,7 +584,6 @@
         - Dynamische Anpassung von Schnittstellen
         - Fehlerbehandlung ohne Ausnahmen
 
-
 8. Observer
     - Ziel:
         - Entkopplung von Subjekt und Beobachtern (lose Kopplung)
@@ -566,7 +605,6 @@
         - Automatisierung und Workflows
         - Reaktive Programmierung (Reactive Programming) (wie React oder Vue.js)
         - Zeitgesteuerte Benachrichtigungen (Countdown-Timer)
-
 
 9. Specification
     - Ziel:
@@ -591,7 +629,6 @@
         - Berechnung von Berechtigungen und Zugriffskontrolle
         - Produkt- oder Serviceangebote
 
-
 10. State
     - Ziel:
         - Kapselung der Zustandslogik in separate State-Klassen
@@ -609,7 +646,6 @@
         - Spiele und interaktive Anwendungen
         - Benutzersitzungen und Authentifizierung
         - Simulationen
-
 
 11. Strategy
     - Ziel:
@@ -632,7 +668,6 @@
         - Optimierung von Lieferketten (Logistik)
         - Benutzerauthentifizierung (Sicherheitsanwendungen)
 
-
 12. Template method
     - Ziel:
         - Wiederverwendbarkeit erhöhen durch Verschieben gemeinsamer Teile eines Algorithmus in eine Basisklasse
@@ -652,7 +687,6 @@
         - Datenbankoperationen (CRUD-Prozesse)
         - Wartungs- oder Systemprozesse
         - Workflow-Management
-
 
 13. Visitor
     - Ziel:
@@ -777,12 +811,8 @@
 
 **Other**
 
-
-
 - todo
 
-1. Service Locator
-   https://designpatternsphp.readthedocs.io/de/latest/More/ServiceLocator/README.html
 2. Repository
    https://designpatternsphp.readthedocs.io/de/latest/More/Repository/README.html
 3. Entitäts-Attribut-Wert (EAV)
