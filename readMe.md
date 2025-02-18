@@ -381,8 +381,7 @@
           zu mocken oder zu ersetzen, sodass die Anwendung getestet werden kann, ohne auf echte Implementierungen
           angewiesen zu sein.
 
-    14. Repository
-
+14. Repository
     - Ziel:
         - Abstraktion des Datenzugriffs durch eine Abstraktionsebene für den Zugriff auf Datenquellen (z.B.
           Datenbanken, Webservices, Dateisysteme). D.h., dass die Logik zur Interaktion mit den Datenquellen
@@ -423,6 +422,42 @@
         - Verwendung in Desktop-Anwendungen: In Desktop-Anwendungen, die mit lokalen Datenbanken oder Dateien arbeiten,
           kann das Repository Pattern verwendet werden, um den Zugriff auf diese Datenquellen zu abstrahieren und den
           Code modular und wartbar zu gestalten.
+
+15. Entitäts-Attribut-Wert (EAV)
+    Es wird häufig genutzt, wenn die Datenstruktur nicht im Voraus vollständig bekannt ist und sich oft ändert, oder
+    wenn eine große Vielfalt an Attributen für Entitäten verwaltet werden muss.
+    - Ziele:
+        - Flexibilität der Datenspeicherung/Erweiterbarkeit: beliebig viele Attribute für eine Entität können
+          hinzugefügt werden, ohne dass die Datenbankstruktur oder der Code selbst geändert werden muss. Neue Attribute
+          können dynamisch zu einer Entität hinzugefügt werden.
+        - Datenmodellierung von heterogenen Daten: eignet sich gut für Szenarien, in denen unterschiedliche Entitäten
+          unterschiedliche Attribute besitzen können (z. B. ein Produkt kann andere Attribute haben als ein Kunde), ohne
+          dass eine separate Tabelle für jedes mögliche Attribut erforderlich ist.
+        - Wiederverwendbarkeit von Entitäten: Entitäten sind nicht an eine feste Anzahl von Attributen gebunden, sodass
+          sie wiederverwendbar sind, ohne neue Tabellenstrukturen zu benötigen.
+        - Dynamische Datenmodellierung: Die Struktur der Daten kann leicht angepasst werden, ohne dass tiefgreifende
+          Änderungen am gesamten Datenbankmodell vorgenommen werden müssen. Ideal für Systeme, die dynamische und
+          benutzerdefinierte Datenstrukturen benötigen.
+        - Vermeidung von Null-Werten: Da das EAV-Modell Attribut-Werte-Paare speichert, werden leere oder nicht
+          definierte Attribute in der Regel durch das Fehlen eines Eintrags behandelt, anstatt leere Felder zu haben,
+          was die Datenbank sauberer hält.
+        - Trennung von Entität und Attributwerten
+        - Reduzierung der Redundanz: Anstatt für jedes mögliche Attribut einer Entität eine eigene Spalte zu haben (wie
+          bei traditionellen relationalen Datenbanken), reduziert das EAV-Muster die Notwendigkeit, redundante Spalten
+          zu erstellen und sorgt für eine kompaktere Speicherung.
+    - Beispiele:
+        - Produktkataloge und E-Commerce-Systeme: Ein Kleidungsstück könnte Attribute wie Größe, Farbe und Material
+          haben, während ein Elektronikgerät andere Attribute wie Speicherkapazität, Farbe, Bauart oder Garantiezeit
+          haben könnte.
+        - Customer Relationship Management (CRM): Ein Kunde könnte Attribute wie Geburtsdatum, Kaufhistorie, Bevorzugte
+          Kommunikationskanäle oder Loyalitätsstatus haben, die regelmäßig angepasst werden.
+        - Content Management Systeme (CMS)
+        - Medizinische/Wissenschaftliche Datenbanken
+        - Personalverwaltung (HR-Systeme)
+        - Inventory-Management-Systeme
+        - Social Media Plattformen
+        - IoT (Internet of Things) und Sensordaten
+        - Energie- und Umweltmanagement-Systeme
 
 ---
 
@@ -761,7 +796,7 @@
         - Chat- und Kommunikationssysteme
 
 
-15. Resilience
+16. Resilience
     dient dazu, die Stabilität und Zuverlässigkeit einer Anwendung zu erhöhen, insbesondere im Hinblick auf die
     Interaktion mit externen Diensten und Ressourcen. Ein System soll trotz unerwarteter Störungen oder Fehlfunktionen
     weiterhin funktioniert oder zumindest in einer
@@ -812,10 +847,5 @@
 **Other**
 
 - todo
-
-2. Repository
-   https://designpatternsphp.readthedocs.io/de/latest/More/Repository/README.html
-3. Entitäts-Attribut-Wert (EAV)
-   https://designpatternsphp.readthedocs.io/de/latest/More/EAV/README.html
-   ? CQRS (Command Query Responsibility Segregation)
-   ? Lazy Initialization
+  ? CQRS (Command Query Responsibility Segregation)
+  ? Lazy Initialization
