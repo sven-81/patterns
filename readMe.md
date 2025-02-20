@@ -882,3 +882,124 @@
         - Auftrags- und Bestellsysteme
         - Event-driven Architecture
         - Multi-Tenant Systeme
+
+---
+## **Hexagonal Architecture vs. Clean Architecture**
+
+Die **Hexagonal Architecture** (auch als "Ports and Adapters" bekannt) und die **Clean Architecture** verfolgen beide
+das Ziel, die Anwendungslogik von externen Abhängigkeiten zu entkoppeln. Es gibt jedoch wichtige Unterschiede in ihrer
+Struktur und dem Fokus auf bestimmte Aspekte der Architektur. Hier sind die wichtigsten Unterschiede zwischen den beiden
+Architekturen:
+
+### 1. **Zielsetzung und Fokus:**
+
+- **Hexagonal Architecture**:
+    - Der Hauptfokus liegt auf der Trennung der Geschäftslogik (Core) von den externen Systemen und Schnittstellen. Sie
+      wird auch als "Ports and Adapters"-Architektur bezeichnet, da sie das Konzept von **Ports** (Schnittstellen) und *
+      *Adapters** (Implementierungen der Schnittstellen) nutzt.
+    - Die Architektur konzentriert sich stark auf die Interaktion mit der Außenwelt, insbesondere wie das System mit
+      externen Geräten oder Diensten kommuniziert (z. B. Web-APIs, Datenbanken, Benutzeroberflächen).
+
+- **Clean Architecture**:
+    - Die Clean Architecture verfolgt ein breiteres Ziel, um die **Wartbarkeit und Flexibilität** des Systems zu
+      gewährleisten, indem sie die Kernlogik (Entities und Use Cases) vom Rest des Systems trennt.
+    - Es geht auch um das Management von Abhängigkeiten und die **Schichtung** der Anwendungslogik, um sicherzustellen,
+      dass jede Schicht nur Abhängigkeiten nach innen hat (aber nicht nach außen).
+
+### 2. **Schichten und Struktur:**
+
+- **Hexagonal Architecture**:
+    - **Core (Domain)**: Die Geschäftslogik, die vom Rest des Systems vollständig entkoppelt ist.
+    - **Ports**: Diese definieren die Schnittstellen, über die das System mit der Außenwelt kommuniziert. Ein Port
+      könnte zum Beispiel eine Schnittstelle für den Zugriff auf eine Datenbank oder eine Web-API sein.
+    - **Adapters**: Die Adapter implementieren die Ports und ermöglichen die tatsächliche Kommunikation mit externen
+      Systemen (z. B. Datenbanken, Web-Frameworks).
+    - **Externe Systeme (External)**: Diese Schicht umfasst alles, was mit der Außenwelt kommuniziert, z. B.
+      Datenbanken, Web-Frameworks oder Benutzeroberflächen.
+
+  In der Hexagonal Architecture liegt der Hauptfokus auf den **Ports und Adaptern**, die den Zugang zu externen Systemen
+  kapseln.
+
+- **Clean Architecture**:
+    - **Entities**: Die Geschäftslogik des Systems, die universell und von den äußeren Schichten (Datenbanken,
+      Benutzeroberflächen) unabhängig ist.
+    - **Use Cases**: Diese Schicht definiert die Anwendungslogik und orchestriert die Interaktion mit den Entities.
+    - **Interface Adapters**: Diese Schicht übersetzt die Anforderungen und Ergebnisse zwischen den Use Cases und
+      externen Systemen (z. B. Datenbankadaptern, APIs).
+    - **Frameworks und Treiber**: Diese äußerste Schicht enthält alles, was für den Betrieb des Systems notwendig ist,
+      wie Frameworks, Datenbanktreiber, Web-Server etc.
+
+  Die Clean Architecture nutzt eine **schichtweise Trennung**, bei der jede Schicht nur mit der nächsten inneren Schicht
+  kommunizieren darf.
+
+### 3. **Abhängigkeitsrichtung:**
+
+- **Hexagonal Architecture**:
+    - Die Hexagonal Architecture legt besonderen Wert auf die **Abstraktion der Außenwelt**. Die Geschäftslogik ist im
+      Zentrum und wird über **Ports** mit der Außenwelt verbunden. Adapter implementieren diese Ports und ermöglichen
+      die Kommunikation mit externen Systemen.
+    - Es gibt **keine festen Schichten** wie bei der Clean Architecture. Stattdessen gibt es eine **zentralisierte
+      Struktur**, in der die Außenwelt durch Ports und Adapter verwaltet wird.
+
+- **Clean Architecture**:
+    - In der Clean Architecture gibt es eine klare **Abhängigkeitsregel**: **Abhängigkeiten dürfen nur nach innen gehen
+      **. Das bedeutet, dass keine Schicht (außer der innersten Schicht, der Entity-Schicht) Abhängigkeiten von äußeren
+      Systemen haben darf. Jede äußere Schicht kann jedoch auf innerste Schichten zugreifen.
+    - Es gibt eine **schichtweise Trennung**, bei der jede Schicht bestimmte Aufgaben übernimmt, wie etwa die Verwaltung
+      der Geschäftslogik (Entities und Use Cases) oder die Schnittstellen zu externen Systemen (Interface Adapters).
+
+### 4. **Ports vs. Use Cases:**
+
+- **Hexagonal Architecture**:
+    - Der Hauptmechanismus zur Kommunikation mit externen Systemen erfolgt über **Ports**, die als Schnittstellen
+      definiert sind. Diese Ports ermöglichen den Zugriff auf verschiedene externe Systeme (z. B. Datenbanken, APIs,
+      UI).
+    - **Adapter** implementieren diese Ports und verbinden sie mit der konkreten Außenwelt.
+
+- **Clean Architecture**:
+    - Die Kommunikation zwischen den verschiedenen Schichten erfolgt über **Use Cases** (also Geschäftslogik). Die Use
+      Cases orchestrieren die Anwendung und interagieren mit den Entities, die die Kernlogik definieren.
+    - **Interface Adapters** übersetzen zwischen den externen Systemen (wie Datenbanken und Web-APIs) und der
+      Geschäftslogik.
+
+### 5. **Testbarkeit und Flexibilität:**
+
+- **Hexagonal Architecture**:
+    - Die Hexagonal Architecture fokussiert sich auf **extreme Testbarkeit und Flexibilität** in Bezug auf externe
+      Abhängigkeiten. Da alle externen Systeme über Ports und Adapter verwaltet werden, kann der Adapter leicht durch
+      einen Mock oder eine andere Implementierung ersetzt werden.
+    - Diese Architektur macht es leicht, neue Schnittstellen zu integrieren, ohne die zentrale Logik zu beeinflussen.
+
+- **Clean Architecture**:
+    - Die Clean Architecture stellt sicher, dass die **Testbarkeit und Flexibilität** des Systems durch die Trennung in
+      unterschiedliche Schichten gewährleistet wird. Die Geschäftslogik ist von äußeren Systemen entkoppelt, was die
+      Tests der Anwendungslogik erleichtert.
+    - **Testbarkeit** ist ebenfalls gewährleistet, da jede Schicht isoliert getestet werden kann, aber der Fokus liegt
+      mehr auf der Trennung von Abhängigkeiten zwischen den Schichten und weniger auf der Abstraktion der
+      Schnittstellen.
+
+### 6. **Kommunikationsfluss:**
+
+- **Hexagonal Architecture**:
+    - Die Kommunikation zwischen den externen Systemen und der Kernlogik erfolgt durch **Ports** und **Adapter**.
+      Externe Systeme rufen Funktionen in den Adaptern auf, die dann die interne Anwendungslogik (über Ports) erreichen.
+
+- **Clean Architecture**:
+    - Die Kommunikation zwischen den Schichten erfolgt in einer klaren **Schichtenstruktur**, in der äußere Schichten (
+      z. B. Interface Adapters) mit den Use Cases interagieren und die Use Cases wiederum die Entitäten (Domain)
+      aufrufen.
+
+### Zusammenfassung:
+
+| Aspekt                        | Hexagonal Architecture                                                  | Clean Architecture                                                 |
+|-------------------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------|
+| **Hauptfokus**                | Entkopplung von externen Systemen via Ports und Adaptern                | Trennung von Geschäftslogik und Infrastruktur                      |
+| **Schichtstruktur**           | Keine festen Schichten, zentraler Core mit Ports und Adaptern           | Feste Schichten: Entities, Use Cases, Adapters, Frameworks         |
+| **Kommunikationsmechanismus** | Kommunikation über Ports, die von Adaptern implementiert werden         | Kommunikation über Use Cases, Interface Adapters                   |
+| **Abhängigkeitsrichtung**     | Abhängigkeiten der Außenwelt gehen zu Ports, Adapter implementieren sie | Abhängigkeiten gehen nur nach innen (zu den inneren Schichten)     |
+| **Testbarkeit**               | Hohe Flexibilität, einfache Tests durch Mocking von Adaptern            | Hohe Testbarkeit durch klare Schichtung                            |
+| **Hauptziel**                 | Flexibilität und Testbarkeit im Umgang mit externen Systemen            | Wartbarkeit und Trennung der Anwendungslogik von der Infrastruktur |
+
+Beide Architekturen bieten eine starke Trennung von Anliegen, aber die **Hexagonal Architecture** legt den Schwerpunkt
+auf den Umgang mit externen Systemen durch Ports und Adapter, während die **Clean Architecture** eine detaillierte,
+schichtweise Trennung der Anwendungslogik anstrebt, um Wartbarkeit und Testbarkeit zu fördern.
