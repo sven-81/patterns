@@ -119,6 +119,19 @@
         - **Cache-Objekte**
         - **Grafikobjekten wie Schriften oder Bitmaps**
 
+7. Lazy Initialization
+    - Ziel:
+        - Vermeidung unnötiger Ressourcenverwendung durch Instanziierung zur benötigten Laufzeit
+        - Speicheroptimierung
+        - Erhöhte Flexibilität und Effizienz
+    - Beispiele:
+        - Datenbankverbindungen
+        - Laden von Bild- oder Mediendateien
+        - Konfigurationsdateien
+        - Lazy Loading von (großen/vielen) Objekten in einer Webanwendung
+        - Caching-Systeme
+        - Instanziierung von Subsystemen in großen Anwendungen
+
 ---
 
 **Structural**
@@ -844,8 +857,28 @@
 
 ---
 
-**Other**
+**Architecture**
 
-- todo
-  ? CQRS (Command Query Responsibility Segregation)
-  ? Lazy Initialization
+1. CQRS (Command Query Responsibility Segregation)
+    - Ziele
+        - Trennung von Lese- und Schreiboperationen
+        - Optimierung von Lese- und Schreibmodellen
+        - Erhöhte Skalierbarkeit
+        - Verbesserte Performance für Lese- und Schreibvorgänge
+        - Erleichterung der Handhabung von komplexen Geschäftslogiken
+        - Flexibilität in der Datenhaltung
+        - Bessere Wartbarkeit und Verständlichkeit des Systems
+        - Erhöhte Flexibilität bei der Einführung von Event Sourcing
+        - Unterstützung für komplexe Event-getriebene Architekturen
+        - Bessere Unterstützung für unterschiedliche Konsistenzanforderungen
+    - Beispiele
+        - E-Commerce-Systeme
+        - Finanz- und Bankensysteme
+        - Content Management Systeme (CMS)
+        - Gaming-Plattformen
+        - Social Media Plattformen
+        - Customer Relationship Management (CRM)
+        - IoT-Systeme (Internet of Things)
+        - Auftrags- und Bestellsysteme
+        - Event-driven Architecture
+        - Multi-Tenant Systeme
