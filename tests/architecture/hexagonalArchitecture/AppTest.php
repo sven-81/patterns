@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace patterns\architecture\hexagonalArchitecture;
 
 use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversClassesThatImplementInterface;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(App::class)]
@@ -12,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 #[CoversClass(GetUser::class)]
 #[CoversClass(InMemoryUserRepository::class)]
 #[CoversClass(User::class)]
-#[CoversClass(UserRepositoryPort::class)]
+#[CoversClassesThatImplementInterface(UserRepositoryPort::class)]
 class AppTest extends TestCase
 {
     public function testRun(): void
