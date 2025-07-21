@@ -13,7 +13,7 @@ class ChatMediator implements Mediator
     {
         /** @var User $storedUser */
         foreach ($this->users as $storedUser) {
-            if (!$storedUser->equals($storedUser)) {
+            if (!$storedUser->equals($user)) {
                 $storedUser->receiveMessage($message);
             }
         }

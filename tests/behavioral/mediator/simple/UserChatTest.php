@@ -30,8 +30,14 @@ class UserChatTest extends TestCase
         $this->expectOutputString(
             <<<'OUT'
 Kevin is sending message: Bello, Bob und Stuart!
+Received message: Bello, Bob und Stuart!
+Received message: Bello, Bob und Stuart!
 Bob is sending message: Bello, Stuart!
+Received message: Bello, Stuart!
+Received message: Bello, Stuart!
 Stuart is sending message: Bon notti, Kevin und Bob!
+Received message: Bon notti, Kevin und Bob!
+Received message: Bon notti, Kevin und Bob!
 
 OUT
         );
