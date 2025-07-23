@@ -1003,3 +1003,12 @@ Architekturen:
 Beide Architekturen bieten eine starke Trennung von Anliegen, aber die **Hexagonal Architecture** legt den Schwerpunkt
 auf den Umgang mit externen Systemen durch Ports und Adapter, während die **Clean Architecture** eine detaillierte,
 schichtweise Trennung der Anwendungslogik anstrebt, um Wartbarkeit und Testbarkeit zu fördern.
+
+| Aspekt                     | Hexagonal Architecture             | Clean Architecture                   |
+| -------------------------- | ---------------------------------- | ------------------------------------ |
+| Zentrale Idee              | Ports & Adapters                   | Entities & UseCases in der Mitte     |
+| Fokus                      | Austauschbarkeit von Adaptern      | Abhängigkeiten vollständig umdrehen  |
+| UseCase-Kommunikation      | Via Ports                          | Via Interfaces                       |
+| Domain-Entities            | Kern, aber ohne "zwingende" Regeln | Stehen strikt im Zentrum             |
+| Infrastruktur-Abhängigkeit | Nur außen (Adapter)                | Nur außen (Framework, Infrastruktur) |
+| Datenfluss                 | Adapter → Port → UseCase → Entity  | Interface → UseCase → Entity         |
